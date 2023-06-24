@@ -1,6 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-*{
-  padding: none;
-  margin: none;
+* {
+  padding: 0;
+  margin: 0;
+}
+.width-100 {
+  width: 100%;
+}
+.res-1440-40 {
+  width: min(100% - 40px, 1440px);
+  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.res-1440-in {
+  width: min(100% - 100px, 1440px);
+  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .res-1440-40 {
+    width: min(100% - 20px, 1440px);
+  }
+  .res-1440-in {
+    width: min(100% - 20px, 1440px);
+  }
 }
