@@ -1,3 +1,480 @@
-.newsLetterBarCnt{
-    background-color: #E7E7E7;
+.newsLetterBarCnt {
+  padding: 15px 0px;
+  background-color: #e7e7e7;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.233);
+  z-index: 10;
+  position: relative;
+}
+.newsLetterBarContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.newsLetterHeadingImage {
+  display: flex;
+  align-items: center;
+}
+.newLetterInputFeilds {
+  align-items: center;
+  display: flex;
+}
+.newsLetterImage {
+  height: 40px;
+}
+.newsLetterHeading {
+  color: #2a6280;
+  font-size: 2em;
+  font-weight: 300;
+  margin-left: 10px;
+  font-family: "Playfair Display";
+  letter-spacing: -0.87px;
+}
+.newLetterInputFeildINP {
+  outline: none;
+  height: 40px;
+  padding: 0px 10px;
+  border: none;
+  background-color: #ededed;
+  font-family: "poppins";
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.newLetterInputFeildSubmit {
+  background-color: #2a6280;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-right: 12px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.newLetterInputFeildSubmitImg {
+  height: 20px;
+}
+
+/* Quality Policy */
+
+.QualityPolicyCnt {
+  background-color: #f5f5f5;
+  z-index: 9;
+}
+
+.QualityPolicyHeadingh1 {
+  text-align: center;
+  color: #2a6280;
+  font-size: 3.5em;
+  font-weight: 600;
+  font-family: "Playfair Display";
+  letter-spacing: -0.87px;
+  padding: 1.1em 0px;
+}
+.QualityPolicyParaP {
+  width: 70%;
+  color: #686868;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "poppins";
+  font-weight: 300;
+  line-height: 130%;
+}
+.QualityPolicyPara {
+  display: flex;
+  justify-content: center;
+}
+.QualityPolicyImages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, 550px);
+  margin-inline: auto;
+  margin: 0px auto;
+  padding: 5em 0px;
+}
+.QualityPolicyImagesSpanImg {
+  width: 60px;
+}
+.QualityPolicyImagesSpanImgText {
+  color: #000;
+  text-align: center;
+  font-size: 0.8em;
+  font-family: Poppins;
+  font-weight: 300;
+  margin-top: 10px;
+  line-height: 136.5%;
+  letter-spacing: 0.28px;
+}
+.QualityPolicyImagesSpan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Clients Reviews */
+
+.ClientsReviewsCnt {
+  background-color: white;
+  padding: 4em 0px;
+}
+.ClientsReviewsContenth1 {
+  text-align: center;
+  color: #2a6280;
+  font-size: 3.5em;
+  font-weight: 600;
+  font-family: "Playfair Display";
+  letter-spacing: -0.87px;
+}
+.ClientsReviewsContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ClientsReviewsContentImg {
+  height: 70px;
+  width: auto;
+  margin: 2em 0px;
+}
+.ClientsReviewsContentReviews {
+  width: min(100%, 500px);
+}
+.ClientsReviewsContentReviewsR {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ClientsReviewsContentReviewsRPara {
+  color: #686868;
+  text-align: center;
+  font-size: 1.1em;
+  font-family: "poppins";
+  font-weight: 300;
+  line-height: 162%;
+}
+.ClientsReviewsContentReviewsRWriter {
+  color: #2a6280;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Playfair Display";
+  font-weight: 400;
+  line-height: 162%;
+  margin: 2em 0px;
+}
+.ClientsReviewsContentBars {
+  width: min(100%, 300px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+.ClientsReviewsContentBar {
+  height: 10px;
+  background-color: #cecece;
+  cursor: pointer;
+}
+
+/* FAQ */
+
+.FAQCnt {
+  padding: 3.5em 0px;
+  background-color: #f5f5f5;
+}
+.FAQContentQuestions {
+  width: 90%;
+  margin: 0px auto;
+  margin-inline: auto;
+}
+.FAQContentHrBar {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #7a7a7a;
+}
+.FAQContentHrBar::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  height: 5px;
+  width: 5px;
+  background-color: #7a7a7a;
+  border-radius: 50%;
+}
+.FAQContenth1 {
+  text-align: center;
+  color: #2a6280;
+  font-size: 3.5em;
+  font-weight: 600;
+  font-family: "Playfair Display";
+  letter-spacing: -0.87px;
+  margin-bottom: 0.75em;
+}
+.FAQContentQuestionsAnswer {
+  display: flex;
+  flex-direction: column;
+  margin: 3em auto;
+  margin-inline: auto;
+  width: 90%;
+}
+.FAQContentQuestionsQues {
+  color: #2c2c2c;
+  font-size: 1em;
+  font-family: "Poppins";
+  font-weight: 400;
+  line-height: 150%;
+}
+.FAQContentQuestionsAns {
+  margin-top: 1em;
+  color: #767676;
+  font-size: 1em;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+/* Main Footer */
+
+.MainFooterCnt {
+  background-color: white;
+  padding: 3.5em 0px;
+}
+.MainFooterContent {
+  display: flex;
+  justify-content: space-between;
+}
+.MainFooterContentLogoAbout {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+}
+.MainFooterContentLogoAboutDiv {
+  display: flex;
+  align-items: center;
+}
+.MainFooterContentLogoImg {
+  height: 50px;
+}
+.MainFooterContentHeadingH {
+  color: #2a6280;
+  font-size: 1.8em;
+  font-weight: 400;
+  font-family: "Playfair Display";
+  line-height: 130%;
+}
+.MainFooterContentParaP {
+  color: #3b3b3b;
+  font-size: 0.9em;
+  font-family: "Poppins";
+  font-weight: 300;
+  line-height: 130%;
+  margin: 2.2em 0px;
+}
+
+.MainFooterContentContact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.MainFooterContentContactContact {
+  display: flex;
+  margin: 5px 0px;
+  align-items: center;
+}
+.MainFooterContentContactH {
+  color: #3b3b3b;
+  font-size: 1.2em;
+  font-family: Poppins;
+  line-height: 130%;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+.MainFooterContentContactContactImg {
+  width: 25px;
+  margin-right: 10px;
+}
+.MainFooterContentContactContactParaP {
+  font-family: "poppins";
+  font-size: 0.9em;
+  font-weight: 200;
+}
+.MainFooterContentCataCredit {
+  width: 40%;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
+.MainFooterContentCataHeadingH {
+  font-family: "poppins";
+  font-weight: 500;
+  margin: 10px 0px;
+  font-size: 1em;
+}
+.MainFooterContentCataLinks {
+  color: #3b3b3b;
+  font-size: 0.9em;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-weight: 275;
+  line-height: 130%;
+  padding-top: 5px;
+}
+.MainFooterContentCataDiv {
+  display: flex;
+  flex-direction: column;
+}
+.MainFooterContentSearchLocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.MainFooterContentSearchLocationImg {
+  width: 80px;
+}
+.MainFooterContentSearchLocationInput {
+  background-color: #f5f5f5;
+  border: none;
+  font-family: "poppins";
+  font-size: 0.7em;
+  outline: none;
+  padding: 0px 5px;
+  height: 40px;
+  width: calc(100% - 40px);
+}
+.MainFooterContentSearchLocationInputDiv {
+  display: flex;
+  margin-top: 1.5em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.MainFooterContentSearchLocationSearchImg {
+  width: 20px;
+}
+
+/* Bottom Bar */
+
+.BarAtBottomCnt {
+  background-color: white;
+  border-top: 1px solid #d9d9d9;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.BarAtBottomContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2em 0px;
+}
+.BarAtBottomContentP {
+  color: #747474;
+  font-size: 0.7em;
+  font-family: "Poppins";
+  font-weight: 275;
+  line-height: 130%;
+}
+
+@media only screen and (max-width: 700px) {
+  .newsLetterBarContent {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .newLetterInputFeilds {
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .newLetterInputFeildINP {
+    width: 40%;
+  }
+  .QualityPolicyParaP {
+    width: 90%;
+    font-size: 1em;
+  }
+  .MainFooterContent {
+    flex-direction: column;
+  }
+  .MainFooterContentLogoAbout{
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+  .MainFooterContentCataCredit{
+    width: 100%;
+    padding: 1em 0px;
+    border-top: 1px solid #3b3b3b;
+    border-bottom: 1px solid #3b3b3b;
+    justify-content: space-between;
+  }
+  .MainFooterContentCataLinks{
+    font-size: .8em;
+  }
+  .MainFooterContentSearchLocation{
+    width: 100%;
+    margin-top: 1.5em;
+  }
+  .BarAtBottomContent{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .BarAtBottomContentP{
+    margin: 5px 0px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .newLetterInputFeilds {
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+  .newLetterInputFeildINP {
+    width: 100%;
+  }
+  .mt-10 {
+    margin-top: 1em;
+  }
+  .responsiveINP {
+    width: calc(100% - 62px);
+  }
+  .newsLetterHeading {
+    font-size: 1.6em;
+  }
+  .QualityPolicyHeadingh1 {
+    font-size: 2.8em;
+  }
+  .QualityPolicyImagesSpanImg {
+    width: 45px;
+  }
+  .QualityPolicyImagesSpanImgText {
+    font-size: 0.6em;
+  }
+  .ClientsReviewsContenth1 {
+    font-size: 2.8em;
+  }
+  .ClientsReviewsContentReviewsRPara {
+    font-size: 0.9em;
+    line-height: 140%;
+  }
+  .ClientsReviewsContentReviewsRWriter {
+    font-size: 1.1em;
+  }
+  .FAQContentQuestions {
+    width: 100%;
+  }
+  .FAQContentQuestionsAnswer {
+    width: 95%;
+  }
+  .FAQContentQuestionsAns {
+    font-size: 0.9em;
+  }
 }
