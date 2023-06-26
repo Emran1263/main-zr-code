@@ -6,9 +6,9 @@ import CategoryPage from "./Pages/CategoryPage";
 export default function MainApp() {
   return (
     <div className="width-100">
-      <AboutPage />
+      {/* <Footer /> */}
+      {/* <AboutPage /> */}
       <CategoryPage />
-      <Footer />
     </div>
   );
 }
