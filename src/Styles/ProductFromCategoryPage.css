@@ -1,0 +1,96 @@
+/* Product From Category Styles */
+
+.productFromCategoryMain {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  overflow-x: hidden;
+}
+
+.productFromCategorySec {
+  width: 85%;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.productListView {
+  width: 90%;
+}
+
+.navPath {
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
+  margin-bottom: 1.5em;
+}
+
+.navPathText {
+  color: #a1a1a1;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 93.5%;
+  letter-spacing: -0.0625rem;
+}
+
+.categoryHeadAndSortDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4em;
+  width: 95%;
+}
+
+.categoryHeaderView {
+  display: flex;
+  flex-direction: row;
+  text-align: baseline;
+  justify-content: center;
+}
+
+.categoryProductsFromH {
+  color: #2a6280;
+  font-size: 2.8rem;
+  font-weight: 500;
+  font-family: Playfair Display;
+  line-height: 92.5%;
+  letter-spacing: -0.02rem;
+}
+
+.categoryNameH {
+  color: #434343;
+  font-size: 2.4rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 138.75%;
+  letter-spacing: -0.075rem;
+  margin-left: 0.5em;
+  justify-self: center;
+}
+
+.sortText {
+  color: #000;
+  font-size: 0.95rem;
+  font-family: Poppins;
+  font-weight: 300;
+}
+
+/* More Products */
+
+.moreFromCategoryHeaderView {
+  text-align: left;
+  margin-bottom: 6em;
+}
+
+.moreFromCategoryH {
+  color: #2a6280;
+  font-size: 2.25rem;
+  font-weight: 500;
+  font-family: Playfair Display;
+  line-height: 92.5%;
+  letter-spacing: -0.02rem;
+}
