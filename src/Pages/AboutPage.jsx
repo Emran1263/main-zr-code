@@ -11,7 +11,7 @@ export default function AboutPage() {
       <AboutTopPage />
       <WhoWeare />
       <HowWeStarted />
-      <OurPhilosophy/>
+      <OurPhilosophy />
     </div>
   );
 }

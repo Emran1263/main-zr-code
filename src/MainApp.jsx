@@ -3,6 +3,7 @@ import Footer from "./components/componentsByHammad/Footer";
 import AboutPage from "./Pages/AboutPage";
 import CategoryPage from "./Pages/CategoryPage";
 import ProductFromCategoryPage from "./Pages/ProductFromCategoryPage";
+import ProductDetailsPage from "./Pages/ProductDetailsPage";
 
 export default function MainApp() {
   return (
@@ -10,7 +11,8 @@ export default function MainApp() {
       {/* <Footer /> */}
       {/* <AboutPage /> */}
       {/* <CategoryPage /> */}
-      <ProductFromCategoryPage />
+      {/* <ProductFromCategoryPage /> */}
+      <ProductDetailsPage />
     </div>
   );
 }
