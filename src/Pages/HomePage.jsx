@@ -1,10 +1,12 @@
 import React from "react";
 import "../Styles/HomePage.css";
+import MainLandingPage from "../components/componentsByHammad/HomePage/MainLandingPage";
+import CategoryPage from "./CategoryPage"
 
 function HomePage() {
-  return <div>HomePage
-
-    <h1>Hello World</h1>
+  return <div className="width-100">
+    <MainLandingPage/>
+    <CategoryPage/>
   </div>;
 }
 
