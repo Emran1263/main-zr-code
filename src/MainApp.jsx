@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./components/componentsByHammad/Footer";
 import AboutPage from "./Pages/AboutPage";
-import HomePage from "./Pages/HomePage";
+import CategoryPage from "./Pages/CategoryPage";
 
 export default function MainApp() {
   return (
