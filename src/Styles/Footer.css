@@ -94,6 +94,15 @@
   margin: 0px auto;
   padding: 5em 0px;
 }
+.QualityPolicyImages2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, 550px);
+  margin-inline: auto;
+  margin: 0px auto;
+  margin-top: 4em;
+}
 .QualityPolicyImagesSpanImg {
   width: 60px;
 }
