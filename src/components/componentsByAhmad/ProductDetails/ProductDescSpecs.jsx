@@ -67,6 +67,22 @@ function ProductDescSpecs() {
               <p className="PDSpecsText">Sialkot, Pakistan</p>
             </div>
           </div>
+          <div className="lightView">
+            <div className="view1">
+              <p className="PDSpecsText">Certifications</p>
+            </div>
+            <div className="view2">
+              <p className="PDSpecsText">PSQCA approved, ISO Certified</p>
+            </div>
+          </div>
+          <div className="darkView">
+            <div className="view1">
+              <p className="PDSpecsText">Stock Status</p>
+            </div>
+            <div className="view2">
+              <p className="PDSpecsText">Available Xo214</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

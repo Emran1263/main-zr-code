@@ -88,12 +88,7 @@ function ProductDisplayDetails() {
               <div className="PDDetailsContactDiv">
                 <p className="sendInquiryButton">Send Inquiry</p>
                 <div className="contactUsDiv">
-                  <p className="contactUsButton">Contact Via </p>
-                  <img
-                    src="./images/whatsapp.svg"
-                    alt=""
-                    className="whatsapp"
-                  />
+                  <p className="contactUsButton">Contact Via WhatsApp</p>
                 </div>
               </div>
             </div>
@@ -107,14 +102,14 @@ function ProductDisplayDetails() {
 function NavPath() {
   return (
     <div className="navPath">
-      <p className="navPathText">Home</p>
-      <p className="navPathText">{">"}</p>
-      <p className="navPathText">Products</p>
-      <p className="navPathText">{">"}</p>
-      <p className="navPathText">Categories</p>
-      <p className="navPathText">{">"}</p>
-      <p className="navPathText">Name</p>
-      <p className="navPathText">{">"}</p>
+      <p className="navPathText">Home&nbsp;</p>
+      <p className="navPathText">{">"}&nbsp;</p>
+      <p className="navPathText">Products&nbsp;</p>
+      <p className="navPathText">{">"}&nbsp;</p>
+      <p className="navPathText">Categories&nbsp;</p>
+      <p className="navPathText">{">"}&nbsp;</p>
+      <p className="navPathText">Name&nbsp;</p>
+      <p className="navPathText">{">"}&nbsp;</p>
       <p className="navPathText">Product Name</p>
     </div>
   );
