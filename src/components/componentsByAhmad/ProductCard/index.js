@@ -2,7 +2,7 @@
 import React from "react";
 
 function ProductCard({ product }) {
-  const { name, id, image } = product;
+  const { name, image } = product;
   return (
     <div className="productCard">
       <div className="productCardImageView">
