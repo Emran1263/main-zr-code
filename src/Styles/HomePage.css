@@ -1,0 +1,145 @@
+/* Main HomePage */
+
+.video_holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main_video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+.mainHomeBack {
+  height: 100vh;
+}
+.color_main_landing_page::before {
+  content: "";
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.887),
+    rgba(0, 0, 0, 0)
+  );
+}
+.mainContainerHeadingPara {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+.mainContainerHeadingParaH1 {
+  color: #fff;
+  text-align: center;
+  font-size: 3.8em;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 93.5%;
+  letter-spacing: -3.2px;
+}
+.mainContainerHeadingParaP1 {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 2em;
+  text-align: center;
+  font-size: 1.1em;
+  font-family: "poppins";
+  font-weight: 200;
+  line-height: 106%;
+}
+.mainContainerHeadingParaP1::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  top: 0;
+  right: -30px;
+  transform: rotate(45deg);
+  animation-name: animators;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* Manufacturer */
+
+.mainManufacturer {
+  padding: 4em 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logoManufacturer{
+    width: 200px;
+}
+.paraManufacturer {
+  color: #3b3b3b;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Poppins";
+  line-height: 130%;
+}
+.h1Manufacturer {
+  margin-top: 2em;
+  color: #2a6280;
+  text-align: center;
+  font-size: 2em;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 130%;
+}
+.para2Manufacturer {
+  color: #686868;
+  text-align: center;
+  width: min(100% , 800px);
+  font-size: 1.1em;
+  margin-top: 1em;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+}
+
+/* Animations */
+
+@keyframes animators {
+  0%,
+  100% {
+    top: 0%;
+  }
+  50% {
+    top: 20%;
+  }
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 700px) {
+  .mainContainerHeadingParaH1{
+    font-size: 2.4em;
+    line-height: 110%;
+  }
+}

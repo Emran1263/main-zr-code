@@ -113,6 +113,9 @@
   .AboutTopPageCntImg {
     margin-top: 2em;
   }
+  .ZRCorporationParaP{
+    font-size: .9em;
+  }
   .spacerFlexBox {
     display: none;
   }
