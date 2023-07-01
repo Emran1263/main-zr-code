@@ -4,7 +4,7 @@ export default function MainLandingPage() {
   return (
     <div className="width-100 p-r color_main_landing_page"
     style={{
-      height: `${window.innerHeight}`,
+      height: `${window.innerHeight}px`,
     }}
     >
       <div className="video_holder">
