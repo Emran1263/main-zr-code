@@ -1,0 +1,703 @@
+/* Styles For Product Details Page */
+
+.PDDetailsMainCnt {
+  display: flex;
+  margin-top: 4rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.PDDescriptionSecCnt {
+  margin-bottom: 8em;
+}
+
+.PDDetailsSecCnt {
+  width: 92%;
+}
+
+.productFromCategoryMain {
+  width: 80%;
+}
+
+/* Product Details Main */
+
+.PDDetailsMainDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Product Details Main Image View */
+
+.PDDetailsImageView {
+  display: flex;
+  width: 45%;
+  height: auto;
+  flex-direction: row;
+}
+
+.PDDetailsMainImg {
+  width: 100%;
+  height: 100%;
+}
+
+.PDDetailsOtherImgView {
+  margin-top: 1.75em;
+}
+
+.PDDetailsOtherImg {
+  width: 4rem;
+  height: 3.8rem;
+  margin: 0.5em 0;
+}
+
+/* Product Details Main Info View */
+
+.PDDetailsInfoView {
+  width: 45%;
+  margin-top: -6rem;
+  align-self: center;
+  align-items: flex-start;
+}
+
+.productNameText {
+  color: #2a6280;
+  font-size: 2.5rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 93.5%;
+  letter-spacing: -0.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.manufacturerText {
+  color: #a1a1a1;
+  font-size: 0.9375rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 93.5%;
+  letter-spacing: -0.04688rem;
+  margin-bottom: 0.75rem;
+}
+
+.logoImg {
+  width: 10%;
+  height: auto;
+  margin-bottom: 0.8rem;
+}
+
+.companyNameText {
+  color: #3b3b3b;
+  font-size: 1.2rem;
+  font-family: Poppins;
+  line-height: 130%;
+  margin-bottom: 0.5rem;
+}
+
+/* Review Div */
+
+.reviewDiv {
+  width: 30%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.reviewText {
+  color: #a1a1a1;
+  font-size: 0.75rem;
+  font-family: Poppins;
+  font-weight: 300;
+}
+
+.inStockText {
+  color: #8fb347;
+  font-size: 0.9375rem;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 0.5rem;
+}
+
+.moreSpecsText {
+  color: #2a6280;
+  font-size: 0.85rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+  margin-bottom: 1rem;
+}
+
+/* Assurance Div */
+
+.PDDetailsAssuranceDiv {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin-bottom: 4rem;
+}
+
+.assuranceImgView {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+}
+
+.assuranceImg {
+  width: 16px;
+  margin-bottom: 0.6rem;
+}
+
+.assuranceTextView {
+  text-align: left;
+}
+
+.assuranceText {
+  color: #7b7b7b;
+  font-size: 0.8125rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+  margin-bottom: 0.6rem;
+}
+
+/* Cart And Contact Div */
+
+.PDDetailsCartAndContactDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.addToCartButton {
+  background-color: rgb(42, 98, 128);
+  padding: 0.36rem 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #d3d3d3;
+  font-size: 0.75rem;
+  font-family: Poppins;
+  margin-bottom: 0.25rem;
+}
+
+.PDDetailsContactDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.sendInquiryButton {
+  background-color: #ffffff;
+  padding: 0.3rem;
+  text-align: center;
+  color: #2a6280;
+  width: 48%;
+  font-size: 0.75rem;
+  font-family: Poppins;
+  margin-bottom: 0.25rem;
+  border: 1px solid #d3d3d3;
+}
+
+.contactUsDiv {
+  width: 48%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #d3d3d3;
+  color: rgb(42, 98, 128);
+  align-items: center;
+  align-self: baseline;
+  justify-content: center;
+}
+
+.contactUsButton {
+  font-size: 0.75rem;
+  font-family: Poppins;
+  padding: 0.3rem;
+}
+
+.contactUsDiv:hover {
+  background-color: rgb(42, 98, 128);
+  color: #fff;
+  transition: 0.3s;
+  border: 1px solid #d3d3d3;
+}
+
+.addToCartButton:hover {
+  background-color: rgb(22, 78, 108);
+  transition: 0.3s;
+}
+
+.sendInquiryButton:hover {
+  background-color: rgb(42, 98, 128);
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.whatsapp {
+  width: 16px;
+}
+
+/* Product Details Description Page */
+
+.PDDescriptionMainCnt {
+  display: flex;
+  margin-top: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.PDDescriptionSecCnt {
+  width: 80%;
+}
+
+.PDDescriptionH {
+  color: #2a6280;
+  font-size: 1rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 145%;
+  margin-bottom: 2rem;
+}
+
+.PDDescriptionView {
+  width: 73%;
+  margin-bottom: 2rem;
+}
+
+.PDDescriptionText {
+  color: #7b7b7b;
+  font-size: 0.875rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+}
+
+.PDSpecsH {
+  color: #2a6280;
+  font-size: 1rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+  margin-bottom: 2rem;
+}
+
+.PDSpecsView {
+  display: flex;
+  flex-direction: column;
+}
+
+.darkView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.85em;
+  background-color: #ebebeb;
+}
+
+.lightView {
+  display: flex;
+  flex-direction: row;
+  padding: 0.85em;
+  background-color: #ffffff;
+}
+
+.PDSpecsText {
+  color: #7b7b7b;
+  font-size: 0.875rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+}
+
+.view1 {
+  width: 25%;
+}
+
+.view2 {
+  width: 75%;
+}
+
+/* Media Querries */
+
+@media only screen and (max-width: 1440px) {
+}
+
+@media only screen and (max-width: 1380px) {
+  .PDDetailsSecCnt {
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .productNameText {
+    font-size: 2.25rem;
+  }
+  .PDDetailsInfoView {
+    width: 44%;
+    align-content: center;
+    margin-top: 1.5rem;
+  }
+  .PDDetailsSecCnt {
+    width: 90%;
+  }
+  .manufacturerText,
+  .inStockText {
+    font-size: 0.8675rem;
+  }
+  .logoImg {
+    width: 9%;
+  }
+  .companyNameText {
+    font-size: 1.08rem;
+  }
+  .reviewDiv {
+    width: 34%;
+  }
+  .moreSpecsText {
+    font-size: 0.785rem;
+  }
+  .assuranceImg {
+    width: 15px;
+  }
+  .assuranceText {
+    font-size: 0.735rem;
+  }
+  .PDDetailsOtherImg {
+    width: 3.4rem;
+    height: 3.2rem;
+    margin: 0.5em 0;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .productNameText {
+    font-size: 2.05rem;
+  }
+  .PDDetailsSecCnt {
+    width: 90%;
+  }
+  .PDDetailsInfoView {
+    width: 45%;
+    margin-top: 1.8rem;
+    align-content: center;
+  }
+  .manufacturerText,
+  .inStockText {
+    font-size: 0.825rem;
+  }
+  .logoImg {
+    width: 8.575%;
+  }
+  .companyNameText {
+    font-size: 0.96rem;
+  }
+  .reviewDiv {
+    width: 34%;
+  }
+  .moreSpecsText {
+    font-size: 0.7525rem;
+  }
+  .assuranceImg {
+    width: 14.27px;
+  }
+  .assuranceText {
+    font-size: 0.675rem;
+  }
+  .PDDetailsOtherImg {
+    width: 3.2rem;
+    height: 3rem;
+    margin: 0.5em 0;
+  }
+  .PDSpecsH,
+  .PDDescriptionH {
+    font-size: 0.89rem;
+  }
+  .PDDescriptionText,
+  .PDSpecsText {
+    font-size: 0.835rem;
+  }
+}
+
+@media only screen and (max-width: 1036px) {
+  .productNameText {
+    font-size: 2.05rem;
+  }
+  .PDDetailsSecCnt {
+    width: 90%;
+  }
+  .PDDetailsInfoView {
+    width: 45%;
+  }
+  .manufacturerText,
+  .inStockText {
+    font-size: 0.825rem;
+  }
+  .logoImg {
+    width: 8.575%;
+  }
+  .companyNameText {
+    font-size: 0.96rem;
+  }
+  .reviewDiv {
+    width: 34%;
+  }
+  .moreSpecsText {
+    font-size: 0.7525rem;
+  }
+  .assuranceImg {
+    width: 14.27px;
+  }
+  .assuranceText {
+    font-size: 0.675rem;
+  }
+  .PDDetailsOtherImg {
+    width: 3.2rem;
+    height: 3rem;
+    margin: 0.5em 0;
+  }
+  .PDSpecsH,
+  .PDDescriptionH {
+    font-size: 0.89rem;
+  }
+  .PDDescriptionText,
+  .PDSpecsText {
+    font-size: 0.835rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .productNameText {
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
+  }
+  .PDDetailsSecCnt {
+    width: 91%;
+  }
+  .PDDetailsInfoView {
+    width: 45%;
+    margin-top: 2rem;
+  }
+  .PDDetailsImageView {
+    width: 43%;
+  }
+  .manufacturerText,
+  .inStockText {
+    font-size: 0.725rem;
+  }
+  .logoImg {
+    width: 8.25%;
+  }
+  .companyNameText {
+    font-size: 0.88rem;
+  }
+  .reviewDiv {
+    width: 34%;
+  }
+  .moreSpecsText {
+    font-size: 0.7rem;
+  }
+  .assuranceImg {
+    width: 14px;
+  }
+  .assuranceText {
+    font-size: 0.6rem;
+  }
+  .PDDetailsOtherImg {
+    width: 2.7rem;
+    height: 2.8rem;
+    margin: 0.3em 0;
+  }
+  .PDSpecsH,
+  .PDDescriptionH {
+    font-size: 0.79rem;
+  }
+  .PDDescriptionText,
+  .PDSpecsText {
+    font-size: 0.8rem;
+  }
+  .assuranceImgView {
+    margin-right: 1rem;
+  }
+  .PDDetailsAssuranceDiv {
+    margin-bottom: 1.2rem;
+  }
+  .contactUsDiv {
+    width: 47%;
+  }
+  .sendInquiryButton {
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 864px) {
+  .productNameText {
+    font-size: 1.65rem;
+    margin-bottom: 0.98rem;
+  }
+  .PDDetailsSecCnt {
+    width: 92.5%;
+  }
+  .PDDetailsInfoView {
+    width: 45%;
+    margin-top: 2rem;
+  }
+  .PDDetailsImageView {
+    width: 42%;
+  }
+  .manufacturerText,
+  .inStockText {
+    font-size: 0.71rem;
+  }
+  .logoImg {
+    width: 8.125%;
+  }
+  .companyNameText {
+    font-size: 0.85rem;
+  }
+  .reviewDiv {
+    width: 34%;
+  }
+  .moreSpecsText {
+    font-size: 0.7rem;
+  }
+  .assuranceImg {
+    width: 14px;
+  }
+  .assuranceText {
+    font-size: 0.7rem;
+  }
+  .PDDetailsOtherImg {
+    width: 2.5rem;
+    height: 2.6rem;
+    margin: 0.267em 0;
+  }
+  .PDSpecsH,
+  .PDDescriptionH {
+    font-size: 0.79rem;
+  }
+  .PDDescriptionText,
+  .PDSpecsText {
+    font-size: 0.8rem;
+  }
+  .assuranceImgView {
+    margin-right: 1rem;
+  }
+  .PDDetailsAssuranceDiv {
+    margin-bottom: 1.1rem;
+  }
+  .addToCartButton,
+  .contactUsButton,
+  .sendInquiryButton {
+    font-size: 0.6rem;
+  }
+  .contactUsDiv {
+    width: 47%;
+  }
+  .sendInquiryButton {
+    width: 47%;
+  }
+  .PDDescriptionView {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .PDDetailsImageView {
+    width: 47%;
+  }
+  .PDDetailsInfoView {
+    width: 45%;
+  }
+  .navPathText {
+    font-size: 0.89rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .PDDetailsMainDiv {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .PDDetailsInfoView {
+    width: 100%;
+  }
+  .PDDetailsImageView {
+    width: 70%;
+  }
+  .PDDetailsOtherImg {
+    width: 6rem;
+    height: auto;
+  }
+  .productNameText {
+    font-size: 2.25rem;
+  }
+  .PDDetailsSecCnt {
+    width: 90%;
+  }
+  .manufacturerText,
+  .inStockText {
+    font-size: 1.09rem;
+  }
+  .logoImg {
+    width: 9.67%;
+  }
+  .companyNameText {
+    font-size: 1.4rem;
+  }
+  .reviewDiv {
+    width: 20%;
+  }
+  .moreSpecsText {
+    font-size: 0.985rem;
+  }
+  .assuranceImg {
+    width: 18px;
+  }
+  .assuranceText {
+    font-size: 0.95rem;
+  }
+  .addToCartButton {
+    width: 80%;
+    align-self: center;
+  }
+  .PDDetailsContactDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .contactUsDiv {
+    width: 80%;
+    align-self: center;
+  }
+  .sendInquiryButton {
+    width: 78%;
+    align-self: center;
+  }
+  .view2 {
+    align-items: center;
+  }
+  .PDSpecsText {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navPathText {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 357px) {
+  .navPathText {
+    font-size: 0.75rem;
+  }
+}
