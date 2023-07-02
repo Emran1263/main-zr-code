@@ -1,5 +1,6 @@
 import React from "react";
-import "../../../Styles/ProductFromCategoryPage.css";
+// import "../../../Styles/ProductFromCategoryPage.css";
+import "../../../Styles/CategoryPage.css"
 import ProductCard from "../ProductCard";
 
 const products = [
@@ -46,8 +47,8 @@ const products = [
 ];
 function ProductFromCategory() {
   return (
-    <div className="res-1440-40 width-100 productFromCategoryMain">
-      <div className="res-1440-in productFromCategorySec">
+    <div className="productFromCategoryMain">
+      <div className="res-1440-in-heavy">
         <div className="navPath">
           <p className="navPathText">Home</p>
           <p className="navPathText">{">"}</p>
@@ -63,7 +64,6 @@ function ProductFromCategory() {
             <h1 className="categoryNameH">Dental Devices</h1>
           </div>
 
-          <p className="sortText">Sort by A-Z &nbsp;{">"}</p>
         </div>
         <div className="productListView">
           {products.map((product) => (

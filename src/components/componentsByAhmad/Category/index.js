@@ -66,8 +66,8 @@ const products2 = [
 ];
 function Category() {
   return (
-    <div className="res-1440-in categoryPageMain">
-      <div className="res-1440-40 categoryPageSec">
+    <div className="width-100 categoryPageMain">
+      <div className="res-1440-in-heavy categoryPageSec">
         <div className="mainHeadingDiv">
           <h1 className="mainHeading">Our Categories</h1>
           <div className="headingLine"></div>

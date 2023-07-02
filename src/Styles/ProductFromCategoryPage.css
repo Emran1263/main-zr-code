@@ -4,19 +4,21 @@
   display: flex;
   width: 100%;
   align-items: center;
+  background-color: green;
   justify-content: center;
   margin-top: 2em;
   overflow-x: hidden;
 }
 
-.productFromCategorySec {
-  width: 90%;
-}
-
 .productListView {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: red;
+  grid-gap: 20px;
   width: 100%;
+  height: auto;
+  margin-inline: auto;
 }
-
 .navPath {
   display: flex;
   flex-direction: row;
@@ -106,8 +108,6 @@
     font-size: 2.57rem;
   }
   .productCard {
-    width: 28rem;
-    height: 41rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -124,8 +124,6 @@
     font-size: 2.57rem;
   }
   .productCard {
-    width: 27rem;
-    height: 39rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -142,8 +140,6 @@
     font-size: 2.28rem;
   }
   .productCard {
-    width: 26rem;
-    height: 38rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -166,8 +162,6 @@
     font-size: 2rem;
   }
   .productCard {
-    width: 25rem;
-    height: 37rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -190,8 +184,6 @@
     font-size: 1.8rem;
   }
   .productCard {
-    width: 25.2rem;
-    height: 37.2rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -214,8 +206,6 @@
     font-size: 1.71rem;
   }
   .productCard {
-    width: 24.5rem;
-    height: 35.5rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -238,8 +228,6 @@
     font-size: 1.69rem;
   }
   .productCard {
-    width: 23.5rem;
-    height: 35rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -262,8 +250,6 @@
     font-size: 1.64rem;
   }
   .productCard {
-    width: 21.67rem;
-    height: 33rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -286,8 +272,6 @@
     font-size: 1.6rem;
   }
   .productCard {
-    width: 20rem;
-    height: 32rem;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -307,8 +291,6 @@
     font-size: 1.52rem;
   }
   .productCard {
-    width: 90%;
-    height: auto;
     background: #2a6280;
     margin-bottom: 2.25em;
   }
@@ -316,11 +298,8 @@
     width: 100%;
     height: 4em;
   }
-  .productListView {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  .productListView{
+    grid-template-columns: 1fr;
   }
   .productTitle {
     font-size: 1.1rem;
