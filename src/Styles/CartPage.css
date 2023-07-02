@@ -1,0 +1,259 @@
+/* Styles For Cart Page */
+
+.CPMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 6rem;
+}
+
+.CPSecDiv {
+  width: 90%;
+}
+
+/* Crat page Heading Styles */
+
+.CartPageH {
+  color: #2a6280;
+  font-size: 3.5rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 93.5%;
+  letter-spacing: -0.2rem;
+  margin-left: 15%;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+
+/* Cart Product Styles */
+
+.CartProductMainDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  box-shadow: 0px 10px 24px 3px rgba(0, 0, 0, 0.175);
+}
+
+/* Image View */
+
+.CartProductImgView {
+  width: 18%;
+  height: auto;
+}
+
+.CartProductImg {
+  height: 100%;
+  width: 100%;
+}
+
+/* Info View */
+
+.CartProductInfoView {
+  display: flex;
+  flex-direction: column;
+  width: 53%;
+  height: 100%;
+}
+
+.CartProductH {
+  color: #2a6280;
+  font-size: 2.8rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 93.5%;
+  letter-spacing: -0.15rem;
+  margin-bottom: 2.5rem;
+}
+
+.CartProductComitmentP {
+  color: #7b7b7b;
+  font-size: 0.875rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+  margin-bottom: 1rem;
+}
+
+.CartProductReviewAndSpecs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 47%;
+}
+
+.CartProductMoreSpecsButton {
+  color: #2a6280;
+  font-size: 0.875rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+  background: none;
+  border: none;
+}
+
+.CartProductReviewDiv {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+}
+
+.CartProductReviewText {
+  color: #a1a1a1;
+  font-size: 0.75rem;
+  font-family: Poppins;
+  font-weight: 300;
+  margin-left: 7.5%;
+}
+
+/* Styles For Selection View */
+
+.CartProductSelectionView {
+  display: block;
+  flex-direction: column;
+  text-align: right;
+  width: 25%;
+  height: 100%;
+  margin-right: 2.5rem;
+  margin-left: auto;
+}
+
+.CartProductCrossIcon {
+  width: 20px;
+  margin-bottom: 8rem;
+}
+
+.CartProductQuantityText {
+  color: #2a6280;
+  font-size: 0.865rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+  margin-bottom: 0.5rem;
+}
+
+.CartProductSelectQuantityDiv {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+  width: 40%;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: center;
+  border: 0.5px solid #2a6280;
+}
+
+.CartProductSetQuantity {
+  color: #2a6280;
+  font-size: 0.725rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 130%;
+  background: none;
+  border: none;
+  width: 33%;
+  padding: 3px 3px;
+}
+
+.CartProductSetQuantity:hover {
+  background-color: #2a6280;
+  color: white;
+  transition: 0.45s;
+}
+
+.CartProductQuantityTextN {
+  color: #2a6280;
+  font-size: 0.725rem;
+  font-family: Poppins;
+  font-weight: 300;
+  align-self: center;
+  line-height: 130%;
+  width: 33%;
+  padding: 3px 3px;
+}
+
+.CartProductInquirySendText {
+  color: #a1a1a1;
+  font-size: 0.5rem;
+  font-family: Poppins;
+  font-weight: 300;
+}
+
+/* Send Button Styels */
+
+.CPQuantityAndSendInquiryDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin: 8rem 0 8rem 2rem;
+}
+
+.CPQuantitySelected {
+  color: #707070;
+  font-size: 1.75rem;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 106%;
+  letter-spacing: -0.15rem;
+}
+
+.CPSendAndCallDiv {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.CartPageSendButton {
+  background: none;
+  border: none;
+  font-weight: 300;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-family: Poppins;
+  background-color: #2a6280;
+  width: 48%;
+  height: 36px;
+}
+
+.CartPageCallButton {
+  background: none;
+  border: none;
+  color: white;
+  background-color: #ffffff;
+  width: 48%;
+  height: 36px;
+  color: #2a6280;
+  font-size: 0.9375rem;
+  font-family: Poppins;
+  font-weight: 300;
+  border: 1px solid #2a6280;
+}
+
+.CartPageCallButton:hover {
+  background-color: #2a6280;
+  color: white;
+  transition: 0.45s;
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1080px) {
+}
+
+@media only screen and (max-width: 786px) {
+}
+
+@media only screen and (max-width: 480) {
+}
