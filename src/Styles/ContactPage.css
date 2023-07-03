@@ -1,0 +1,115 @@
+/* Styles For Contact Page */
+
+.ContactPageMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+
+.ContactPageSecDiv {
+  width: 80%;
+}
+
+/* Styles For Map */
+
+.ContactPageLocationMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.ContactPageHeading {
+  color: #2a6280;
+  font-size: 3.5rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 93.5%;
+  letter-spacing: -0.2rem;
+  margin-bottom: 6rem;
+}
+
+.ContactPageLocationMapDiv {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.Map {
+  width: 100%;
+  height: 60vh;
+  max-height: 600px;
+}
+
+/* Styles For After Sales Contact Services*/
+
+/* Contact Us */
+
+.ContactUsMain {
+  margin-top: 4rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-inline: auto;
+}
+
+.ContactPageH {
+  color: #2a6280;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 93.5%;
+  letter-spacing: -0.2rem;
+  margin-bottom: 6rem;
+}
+
+.ContactPageText {
+  color: #090909;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: Poppins;
+  font-weight: 275;
+  line-height: 149.5%;
+  letter-spacing: 0.06rem;
+  margin-bottom: 2rem;
+}
+
+.ContactPageSocialMediaDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.ContactPageSocialMediaLink {
+  margin: 2rem 0 2rem 0;
+}
+
+.CPSMLinkImage {
+  width: 38px;
+  margin-bottom: 1rem;
+}
+
+.CPSMLinkText {
+  color: #1f1f1f;
+  font-size: 1.25rem;
+  font-family: Poppins;
+  font-weight: 275;
+  line-height: 130%;
+}
+
+.ContactPageSocialLinksDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ContactPageSocialMediaHyperLink {
+  margin: 1rem 0 1rem 0;
+}
+
+.ContactPageSocialMediaHyperLinkImg {
+  width: 52px;
+}
