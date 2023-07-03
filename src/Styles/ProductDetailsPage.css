@@ -326,9 +326,6 @@
 
 /* Media Querries */
 
-@media only screen and (max-width: 1440px) {
-}
-
 @media only screen and (max-width: 1380px) {
   .PDDetailsSecCnt {
     width: 92%;

@@ -17,7 +17,7 @@ export default function MainApp() {
         <Route path="/products" element={<CategoryPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/details" element={<ProductDetailsPage />} />
-        <Route path="/test" element={<ContactPage />} />
+        <Route path="/test" element={<InquiryPage />} />
       </Routes>
     </div>
   );
