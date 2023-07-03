@@ -1,6 +1,6 @@
 import React from "react";
+import "../../../Styles/CategoryPage.css"
 import ProductCard from "../ProductCard";
-import "../../../Styles/ProductFromCategoryPage.css";
 
 const products = [
   {
@@ -26,8 +26,8 @@ const products = [
 ];
 function MoreProducts() {
   return (
-    <div className="productFromCategoryMain">
-      <div className="res-1440-heavy">
+    <div className="width-100 categoryPageMain">
+      <div className="res-1440-in-heavy">
         <div className="moreFromCategoryHeaderView">
           <h1 className="moreFromCategoryH">
             More products from other categories

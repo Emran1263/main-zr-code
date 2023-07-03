@@ -1,5 +1,6 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import "../../../Styles/CategoryPage.css"
+
 
 function ProductCard({ product }) {
   const { name, image } = product;

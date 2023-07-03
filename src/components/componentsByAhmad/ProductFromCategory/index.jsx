@@ -1,5 +1,4 @@
 import React from "react";
-// import "../../../Styles/ProductFromCategoryPage.css";
 import "../../../Styles/CategoryPage.css"
 import ProductCard from "../ProductCard";
 
@@ -47,7 +46,7 @@ const products = [
 ];
 function ProductFromCategory() {
   return (
-    <div className="productFromCategoryMain">
+    <div className="width-100 categoryPageMain">
       <div className="res-1440-in-heavy">
         <div className="navPath">
           <p className="navPathText">Home</p>

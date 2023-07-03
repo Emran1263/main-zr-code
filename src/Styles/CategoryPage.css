@@ -12,6 +12,73 @@
 .productListView {
   width: 100%;
 }
+.navPath {
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
+  margin-bottom: 1.5em;
+}
+
+.categoryHeadAndSortDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4em;
+  width: 100%;
+}
+
+.categoryNameH {
+  color: #434343;
+  font-size: 2.4rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 138.75%;
+  letter-spacing: -0.075rem;
+  margin-left: 0.5em;
+  justify-self: center;
+}
+
+.moreFromCategoryHeaderView {
+  text-align: left;
+  margin-bottom: 6em;
+}
+
+.moreFromCategoryH {
+  color: #2a6280;
+  font-size: 2.25rem;
+  font-weight: 500;
+  font-family: Playfair Display;
+  line-height: 92.5%;
+  letter-spacing: -0.02rem;
+}
+
+.categoryHeaderView {
+  display: flex;
+  flex-direction: row;
+  text-align: baseline;
+  justify-content: center;
+}
+
+.categoryProductsFromH {
+  color: #2a6280;
+  font-size: 2.8rem;
+  font-weight: 500;
+  font-family: Playfair Display;
+  line-height: 92.5%;
+  letter-spacing: -0.02rem;
+}
+
+.navPathText {
+  color: #a1a1a1;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 93.5%;
+  letter-spacing: -0.0625rem;
+}
+
 
 .mainHeadingDiv {
   width: 95%;
@@ -261,6 +328,17 @@
   }
   .productIcon {
     width: 26px;
+  }
+  .categoryProductsFromH{
+    font-size: 1.5em;
+  }
+  .categoryNameH{
+    font-size: 1.2em;
+  }
+  .categoryHeaderView{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 

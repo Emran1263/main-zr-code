@@ -6,6 +6,7 @@
   align-items: center;
   background-color: green;
   justify-content: center;
+  margin-inline: auto;
   margin-top: 2em;
   overflow-x: hidden;
 }
