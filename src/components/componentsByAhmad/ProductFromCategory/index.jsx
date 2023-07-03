@@ -46,8 +46,13 @@ const products = [
 ];
 function ProductFromCategory() {
   return (
+<<<<<<< HEAD:src/components/componentsByAhmad/ProductFromCategory/index.jsx
     <div className="width-100 categoryPageMain">
       <div className="res-1440-in-heavy">
+=======
+    <div className="res-1440-40 productFromCategoryMain">
+      <div className="res-1440-in productFromCategorySec">
+>>>>>>> 0c0222f8f1cb9efb2c8ca31b1207c29a72f58e40:src/components/componentsByAhmad/ProductFromCategory/index.js
         <div className="navPath">
           <p className="navPathText">Home</p>
           <p className="navPathText">{">"}</p>
