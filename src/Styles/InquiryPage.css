@@ -1,0 +1,235 @@
+/* Styles For Inquiry Form */
+
+/* Styles For Main Page */
+
+.InquiryPageMain {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 4rem;
+}
+
+.InquiryPageSec {
+}
+
+.IFMainDiv {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Heading */
+
+.IFHeading {
+  color: #2a6280;
+  font-size: 3.5rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 89%;
+  letter-spacing: -0.2rem;
+  margin-top: 5rem;
+  margin-bottom: 4.25rem;
+  width: 80%;
+}
+
+/* Styles For Main Form */
+
+.IFMainCard {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  height: auto;
+  margin: 3em 0rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-items: center;
+  border-radius: 5px;
+}
+
+.btn_send_i_call {
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+.IPButtonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.MAIN_BTN {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.98em;
+  width: 23.5%;
+  font-weight: 300;
+}
+
+.send_inquiry_btn_send_INQUIRY {
+  background-color: #2a6280;
+  padding: 10px 20px;
+  color: white;
+  margin-right: 20px;
+}
+
+.send_inquiry_btn_send_INQUIRY:hover {
+  background-color: rgb(22, 78, 108);
+}
+
+.call_inquiry_btn_CALL_US {
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 1px solid #2a6280;
+  color: #2a6280;
+}
+
+.call_inquiry_btn_CALL_US:hover {
+  background-color: #2a6280;
+  color: white;
+  transition: 0.4s;
+}
+
+.IFFormInputs {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.IFInputFieldView {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
+  text-align: left;
+  justify-content: space-evenly;
+  padding: 1rem 0rem;
+}
+
+.IFPlaceholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 275;
+  font-size: 1rem;
+  line-height: 99.5%;
+  letter-spacing: -0.02em;
+  color: #090909;
+  margin-bottom: 1.25rem;
+}
+
+.IFInputField {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: #8a8a8a;
+  border-bottom: 1px solid #767676;
+}
+
+.IFMainForm {
+  width: 95%;
+}
+
+.IFDoubleInputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.IFSingleInput {
+  width: 100%;
+}
+
+.IFSingleInputHalf {
+  width: 42.5%;
+}
+
+.SendAndCall {
+  margin-bottom: -8rem;
+  margin-inline-end: 10rem;
+}
+
+.IFInputField_1 {
+  min-width: 100%;
+  max-width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #767676;
+  outline: none;
+  height: 50px;
+}
+
+/* Styles For How Things Work */
+
+.IFHowThingsWork-HTW {
+  width: 30%;
+  height: auto;
+  padding: 2.25rem 1.75rem;
+  border: 0px solid #000;
+  background: #fbfbfb;
+  box-shadow: 4px 5px 94px 1px rgba(0, 0, 0, 0.1);
+}
+
+.IFHTWHeading {
+  color: #2a6280;
+  font-size: 1.75rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 99.5%;
+  letter-spacing: -0.04rem;
+}
+
+.StepMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.IFStepView {
+  margin: 1rem 0rem;
+}
+
+.StepHeading {
+  color: #707070;
+  font-size: 1.6rem;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 88.5%;
+  letter-spacing: -0.11rem;
+  margin: 2rem 0;
+}
+
+.StepText {
+  color: #6c6c6c;
+  font-size: 1.3rem;
+  font-family: Poppins;
+  font-weight: 275;
+  line-height: 93.5%;
+  letter-spacing: -0.03rem;
+  width: 85%;
+}
+
+/* Media Querries */
+
+@media only screen and (max-width: 900px) {
+  .IFMainCard {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    width: 100%;
+  }
+  .IFHowThingsWork-HTW {
+    width: 90%;
+  }
+  .IFFormInputs {
+    width: 100%;
+  }
+  .IFSingleInputHalf {
+    width: 48%;
+  }
+}
