@@ -12,6 +12,7 @@
 .productListView {
   width: 100%;
 }
+
 .navPath {
   display: flex;
   flex-direction: row;
@@ -51,6 +52,7 @@
   font-family: Playfair Display;
   line-height: 92.5%;
   letter-spacing: -0.02rem;
+  margin-left: 1.5rem;
 }
 
 .categoryHeaderView {
@@ -78,7 +80,6 @@
   line-height: 93.5%;
   letter-spacing: -0.0625rem;
 }
-
 
 .mainHeadingDiv {
   width: 95%;
@@ -128,13 +129,11 @@
 
 .productCard {
   width: 100%;
-
   height: auto;
   background: #2a6280;
   box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.25);
   margin-bottom: 2.25em;
 }
-
 
 .productCardImageView {
   width: 100%;
@@ -173,31 +172,6 @@
 }
 
 /* Media Querries */
-
-@media (max-width: 1440px) {
-  .mainHeading {
-    font-size: 2.7rem;
-  }
-  .headingLine {
-    min-width: 900px;
-  }
-}
-
-@media (max-width: 1380px) {
-  .mainHeading {
-    font-size: 2.7rem;
-  }
-  .sectionHeading {
-    font-size: 1.5rem;
-  }
-  .headingLine {
-    min-width: 740px;
-  }
-  .productCard {
-    background: #2a6280;
-    margin-bottom: 2.25em;
-  }
-}
 
 @media (max-width: 1200px) {
   .mainHeading {
@@ -309,6 +283,14 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .productCard {
+    width: 82.5%;
+    height: auto;
+    margin-inline: auto;
+  }
+}
+
 @media (max-width: 864px) {
   .mainHeading {
     font-size: 1.72rem;
@@ -322,6 +304,8 @@
   .productCard {
     background: #2a6280;
     margin-bottom: 2.25em;
+    width: 83.5%;
+    height: auto;
   }
   .productTitle {
     font-size: 1.01rem;
@@ -329,13 +313,15 @@
   .productIcon {
     width: 26px;
   }
-  .categoryProductsFromH{
+  .categoryProductsFromH {
     font-size: 1.5em;
   }
-  .categoryNameH{
+  .moreFromCategoryH {
+  }
+  .categoryNameH {
     font-size: 1.2em;
   }
-  .categoryHeaderView{
+  .categoryHeaderView {
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -372,7 +358,7 @@
     min-width: 430px;
   }
   .productCard {
-    width: 100%;
+    width: 80%;
     height: auto;
     background: #2a6280;
     margin-bottom: 2.25em;

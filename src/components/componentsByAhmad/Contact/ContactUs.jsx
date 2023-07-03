@@ -12,7 +12,7 @@ function ContactUs() {
       </p>
       <div className="ContactPageSocialMediaDiv">
         <div className="ContactPageSocialMediaLink">
-          <img src="/images/disc.png" alt="" className="CPSMLinkImage" />
+          <img src="/images/mail.svg" alt="" className="CPSMLinkImage" />
           <p className="CPSMLinkText">info@zrsurgicals.com</p>
         </div>
         <div className="ContactPageSocialMediaLink">
