@@ -2,7 +2,7 @@ import React from "react";
 
 function ProductDisplayDetails() {
   return (
-    <div className="res-1440-40 width-100 PDDetailsMainCnt">
+    <div className="res-1440-40 PDDetailsMainCnt">
       <div className="res-1440-in PDDetailsSecCnt">
         <NavPath />
         <div className="PDDetailsMainDiv">

@@ -26,7 +26,7 @@ const products = [
 ];
 function MoreProducts() {
   return (
-    <div className="width-100 res-1440-40 productFromCategoryMain">
+    <div className="res-1440-40 productFromCategoryMain">
       <div className="res-1440-in productFromCategorySec">
         <div className="moreFromCategoryHeaderView">
           <h1 className="moreFromCategoryH">

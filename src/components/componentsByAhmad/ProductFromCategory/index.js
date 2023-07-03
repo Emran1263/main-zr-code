@@ -46,7 +46,7 @@ const products = [
 ];
 function ProductFromCategory() {
   return (
-    <div className="res-1440-40 width-100 productFromCategoryMain">
+    <div className="res-1440-40 productFromCategoryMain">
       <div className="res-1440-in productFromCategorySec">
         <div className="navPath">
           <p className="navPathText">Home</p>
