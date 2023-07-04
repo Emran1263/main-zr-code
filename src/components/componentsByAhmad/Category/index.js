@@ -1,5 +1,6 @@
 import React from "react";
-import ProductCard from "../ProductCard";
+import "../../../Styles/CategoryPage.css"
+import { Link } from "react-router-dom";
 const products1 = [
   {
     id: 1,
@@ -76,7 +77,7 @@ function Category() {
           <h2 className="sectionHeading">Medical Devices</h2>
           <div className="productListView">
             {products1.map((product) => (
-              <ProductCard product={product} />
+              <ProductCardForCate product={product} />
             ))}
           </div>
         </div>
@@ -84,7 +85,7 @@ function Category() {
           <h2 className="sectionHeading">Medical Equipment</h2>
           <div className="productListView">
             {products2.map((product) => (
-              <ProductCard product={product} />
+              <ProductCardForCate product={product} />
             ))}
           </div>
         </div>
@@ -94,3 +95,21 @@ function Category() {
 }
 
 export default Category;
+
+
+function ProductCardForCate({ product }) {
+  const { name, image } = product;
+  return (
+    <div className="productCard">
+      <div className="productCardImageView">
+        <img src={image} className="productCardImage" />
+      </div>
+      <Link to={`/${name}`}>
+      <div className="productCardInfoView">
+        <p className="productTitle">{name}</p>
+        <img src="./images/goToDetails-icon.png" className="productIcon" />
+      </div>
+      </Link>
+    </div>
+  );
+}

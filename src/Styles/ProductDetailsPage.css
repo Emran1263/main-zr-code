@@ -46,6 +46,8 @@
 }
 
 .PDDetailsOtherImg {
+  border: 1px solid #a1a1a1;
+  cursor: pointer;
   width: 4rem;
   height: 3.8rem;
   margin: 0.5em 0;
@@ -324,10 +326,16 @@
   width: 75%;
 }
 
+.activeImage{
+  border: 5px solid #2a6280;
+  filter: saturate(1);
+}
+.passiveImage{
+  filter: saturate(0);
+
+}
 /* Media Querries */
 
-@media only screen and (max-width: 1440px) {
-}
 
 @media only screen and (max-width: 1380px) {
   .PDDetailsSecCnt {

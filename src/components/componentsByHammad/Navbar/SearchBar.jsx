@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { AppContext } from "../../context/AllProductsContext";
+import "../../../Styles/Navbar.css";
 
 export default function SearchBar() {
+  const data = useContext(AppContext);
+  const [searchText, setSearchText] = useState("")
+   
   const Categories = [
     "Imaging Devices",
     "Cardiovascular Devices",
@@ -26,23 +32,52 @@ export default function SearchBar() {
             <div className="SearchBarContentDropDownContent">
               {Categories.map((category, index) => {
                 return (
-                  <a key={index} className="category_drop_down_a" href="">
+                  <Link to={`/${category}`} key={index} className="category_drop_down_a" href="">
                     {category}
-                  </a>
+                  </Link>
                 );
               })}
             </div>
           </div>
-          <div className="SearchBarContentInputDiv">
+          <div className="SearchBarContentInputFeildDiv">
             <input
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
               placeholder="What you’re looking for"
               type="text"
               className="SearchBarContentInputFeild"
             />
+            <div
+              className="SearchBarContentDropDownContent_re"
+              style={{ display: searchText ? "block" : "none" }}
+            >
+              {data.map((item) => {
+                return (
+                  searchText !== "" &&
+                  item.name.toLowerCase().includes(searchText.toLowerCase()) && (
+                    <Link
+                      onClick={() => {
+                        setSearchText("");
+                      }}
+                      className="category_drop_down_a"
+                      to={`/${item.categories
+                        .map((prod) => prod.name)
+                        .toString()}/${item.id}`}
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className="SearchBarContentCallCart">
-          <img src="/images/cart.png" alt="" className="SearchBarCntCart" />
+          <img
+            src="/images/cart.png"
+            alt=""
+            className="SearchBarCntCallimg border_both_img"
+          />
           <div className="SearchBarCntCallDiv">
             <img
               src="/images/call.png"

@@ -5,7 +5,7 @@ import "../Styles/ProductDetailsPage.css";
 function ProductDetailsPage() {
   return (
     <div>
-      <ProductDetails />
+      <ProductDetails  />
     </div>
   );
 }

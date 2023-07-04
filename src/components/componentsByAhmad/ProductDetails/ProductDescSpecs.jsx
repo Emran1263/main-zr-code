@@ -1,25 +1,19 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-function ProductDescSpecs() {
+function ProductDescSpecs({ particular_data }) {
+  const {cata} = useParams()
   return (
-    <div className="res-1440-40 width-100 PDDescriptionMainCnt">
+    cata && <div className="res-1440-40 width-100 PDDescriptionMainCnt">
       <div className="res-1440-in PDDescriptionSecCnt">
         <h1 className="PDDescriptionH">Description</h1>
         <div className="PDDescriptionView">
-          <p className="PDDescriptionText">
-            Furthermore, we are committed to providing exceptional customer
-            service. Our knowledgeable and responsive team is readily available
-            to answer any questions, provide technical support, and assist with
-            any concerns or inquiries you may have. We believe in establishing
-            strong relationships with our clients, and we strive to exceed
-            expectations at every step of the journey.
-            <br /> By choosing our company, you can trust that you are receiving
-            artificial joints of exceptional quality, precision, and
-            reliability. We are honored to play a part in restoring mobility and
-            enhancing lives, and we look forward to partnering with you in
-            delivering the best possible solutions for your patients' orthopedic
-            needs.
-          </p>
+          <p
+            className="PDDescriptionText"
+            dangerouslySetInnerHTML={{
+              __html: particular_data.description,
+            }}
+          />
         </div>
         <h1 className="PDSpecsH">Specifications</h1>
         <div className="PDSpecsView">
@@ -28,15 +22,15 @@ function ProductDescSpecs() {
               <p className="PDSpecsText">Product name</p>
             </div>
             <div className="view2">
-              <p className="PDSpecsText">Artificial Joints</p>
+              <p className="PDSpecsText">{particular_data.name}</p>
             </div>
           </div>
           <div className="lightView">
             <div className="view1">
-              <p className="PDSpecsText">Catagory</p>
+              <p className="PDSpecsText">Category Name</p>
             </div>
             <div className="view2">
-              <p className="PDSpecsText">Orthopedic Devices</p>
+              <p className="PDSpecsText">{cata}</p>
             </div>
           </div>
           <div className="darkView">
@@ -45,7 +39,7 @@ function ProductDescSpecs() {
             </div>
             <div className="view2">
               <p className="PDSpecsText">
-                Artificial Joints, Orthopedic Devices, Surgical Equipment
+               {particular_data.name}, {cata}, Surgical Equipment
               </p>
             </div>
           </div>
