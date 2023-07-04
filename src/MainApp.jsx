@@ -6,6 +6,8 @@ import ProductFromCategoryPage from "./Pages/ProductFromCategoryPage";
 import ProductDetailsPage from "./Pages/ProductDetailsPage";
 import HomePage from "./Pages/HomePage";
 import CartPage from "./Pages/CartPage";
+import InquiryPage from "./Pages/InquiryPage";
+import ContactPage from "./Pages/ContactPage";
 
 export default function MainApp() {
   return (
@@ -14,9 +16,8 @@ export default function MainApp() {
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<CategoryPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/test" element={<ProductFromCategoryPage />} />
         <Route path="/details" element={<ProductDetailsPage />} />
-        <Route path="/test" element={<CartPage />} />
+        <Route path="/test" element={<InquiryPage />} />
       </Routes>
     </div>
   );
