@@ -1,54 +1,60 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { commerce } from "../../lib/commerce";
+import { Link } from "react-router-dom";
+import LikedItemsContext from "../../context/AddToCartContext";
+import Spinner from "../Spinner";
 
-function ProductDisplayDetails({ particular_data }) {
+function ProductDisplayDetails({ particular_data, cata, prodId }) {
   const [ImagesAssets, setImageAssets] = useState([]);
-  const [currentImg, setCurrentImg] = useState()
+  const [loading, setLoading] = useState(false)
+  const [currentImg, setCurrentImg] = useState();
+  const { AddFromCart } = useContext(LikedItemsContext);
   useEffect(() => {
+    setLoading(true)
     const getallimages = async () => {
       try {
         const product = await commerce.products.retrieve(particular_data.id);
         const assets = product.assets;
-        setImageAssets(assets)
-        console.log(ImagesAssets)
-
+        setImageAssets(assets);
       } catch (error) {
         console.error("Error fetching product:", error);
       }
     };
     getallimages();
-    setCurrentImg(particular_data.image.url)
-  }, []);
-  
-  
+    setCurrentImg(particular_data.image.url);
+    setLoading(false)
+  }, [prodId]);
 
   return (
     particular_data && (
-      <div className="res-1440-40 PDDetailsMainCnt">
-        <div className="res-1440-in PDDetailsSecCnt">
+      <div className="PDDetailsMainCnt">
+        {loading && <Spinner/>}
+        <div className="res-1440-40">
           <NavPath />
           <div className="PDDetailsMainDiv">
             <div className="PDDetailsImageView">
-              <img
-                src={currentImg}
-                alt=""
-                className="PDDetailsMainImg"
-              />
               <div className="PDDetailsOtherImgView">
                 {ImagesAssets.map((item, index) => {
-                  return ImagesAssets.length > 0 &&  (
-                    <img
-                      key={index}
-                      src={item.url}
-                      alt={particular_data.name}
-                      className={`PDDetailsOtherImg ${item.url===currentImg ? "activeImage" : "passiveImage"}`}
-                      onClick={()=>{
-                        setCurrentImg(item.url)
-                      }}
-                    />
+                  return (
+                    ImagesAssets.length > 0 && (
+                      <img
+                        key={index}
+                        src={item.url}
+                        alt={particular_data.name}
+                        className={`PDDetailsOtherImg ${
+                          item.url === currentImg
+                            ? "activeImage"
+                            : "passiveImage"
+                        }`}
+                        onClick={() => {
+                          setCurrentImg(item.url);
+                        }}
+                      />
+                    )
                   );
                 })}
               </div>
+              <img src={currentImg} alt="" className="PDDetailsMainImg" />
             </div>
             <div className="PDDetailsInfoView">
               <h1 className="productNameText">{particular_data.name}</h1>
@@ -65,26 +71,28 @@ function ProductDisplayDetails({ particular_data }) {
               </div>
               <p className="inStockText">In Stock</p>
               <p className="manufacturerText">Call for price quote</p>
-              <p className="moreSpecsText">More Specifications</p>
+              <a href={particular_data.thank_you_url} className="moreSpecsText">
+                More Specifications
+              </a>
               <div className="PDDetailsAssuranceDiv">
                 <div className="assuranceImgView">
                   <img
-                    src="./images/specImg1.svg"
+                    src="/images/specImg1.svg"
                     alt=""
                     className="assuranceImg"
                   />
                   <img
-                    src="./images/specImg2.svg"
+                    src="/images/specImg2.svg"
                     alt=""
                     className="assuranceImg"
                   />
                   <img
-                    src="./images/specImg3.svg"
+                    src="/images/specImg3.svg"
                     alt=""
                     className="assuranceImg"
                   />
                   <img
-                    src="./images/specImg4.svg"
+                    src="/images/specImg4.svg"
                     alt=""
                     className="assuranceImg"
                   />
@@ -99,11 +107,33 @@ function ProductDisplayDetails({ particular_data }) {
                 </div>
               </div>
               <div className="PDDetailsCartAndContactDiv">
-                <p className="addToCartButton">Add To Cart</p>
+                <button
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    AddFromCart(particular_data);
+                  }}
+                  className="addToCartButton"
+                >
+                  Add To Cart
+                </button>
                 <div className="PDDetailsContactDiv">
-                  <p className="sendInquiryButton">Send Inquiry</p>
+                  <Link
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}
+                    to={`/inquiry/${cata}/${prodId}`}
+                    className="sendInquiryButton"
+                  >
+                    Send Inquiry
+                  </Link>
                   <div className="contactUsDiv">
-                    <p className="contactUsButton">Contact Via WhatsApp</p>
+                    <a
+                      target="_blank"
+                      href="https://wa.me/+923069566970"
+                      className="contactUsButton"
+                    >
+                      Contact Via WhatsApp
+                    </a>
                   </div>
                 </div>
               </div>

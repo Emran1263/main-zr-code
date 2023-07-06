@@ -1,0 +1,139 @@
+/* Styles For Contact Page */
+
+.ContactPageMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 4em;
+}
+
+
+/* Styles For Map */
+
+.ContactPageLocationMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.ContactPageHeading {
+  color: #2a6280;
+  margin-inline-start: 2%;
+  font-size: 3.5rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 93.5%;
+  letter-spacing: -0.2rem;
+  margin-bottom: 1.2em;
+}
+
+.ContactPageLocationMapDiv {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Map {
+  
+  width: min(100% - 10px , 800px);
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.3);
+  height: 60vh;
+  max-height: 600px;
+}
+
+/* Styles For After Sales Contact Services*/
+
+/* Contact Us */
+
+.ContactUsMain {
+  margin-top: 2em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: min(100% - 10px , 600px);
+  margin-inline: auto;
+}
+
+.ContactPageH {
+  color: #2a6280;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  line-height: 93.5%;
+  letter-spacing: -0.2rem;
+  margin-bottom: 4rem;
+}
+
+.ContactPageText {
+  color: #090909;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: Poppins;
+  font-weight: 275;
+  line-height: 149.5%;
+  letter-spacing: 0.06rem;
+  margin-bottom: 2rem;
+}
+
+.ContactPageSocialMediaDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.ContactPageSocialMediaLink {
+  margin: 2rem 0 2rem 0;
+}
+
+.CPSMLinkImage {
+  width: 38px;
+  margin-bottom: 1rem;
+}
+
+.CPSMLinkText {
+  color: #1f1f1f;
+  font-size: 1.25rem;
+  font-family: "Poppins";
+  font-weight: 275;
+  line-height: 130%;
+}
+
+.ContactPageSocialLinksDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 4em;
+}
+
+.ContactPageSocialMediaHyperLink {
+  margin: 1rem 0 1rem 0;
+}
+
+.ContactPageSocialMediaHyperLinkImg {
+  width: 52px;
+}
+
+/* Media Querries */
+
+
+@media only screen and (max-width: 450px) {
+  .CPSMLinkText{
+    font-size: .9em;
+  }
+  .ContactPageText{
+    font-size: .9em;
+  }
+  .ContactPageH{
+    font-size: 2.8em;
+  }
+  .ContactPageSocialMediaHyperLinkImg{
+    width: 40px;
+  }
+}

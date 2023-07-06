@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 function ProductDescSpecs({ particular_data }) {
   const {cata} = useParams()
   return (
-    cata && <div className="res-1440-40 width-100 PDDescriptionMainCnt">
-      <div className="res-1440-in PDDescriptionSecCnt">
+    cata && <div className="width-100 PDDescriptionMainCnt">
+      <div className="res-1440-40 PDDescriptionSecCnt">
         <h1 className="PDDescriptionH">Description</h1>
         <div className="PDDescriptionView">
           <p

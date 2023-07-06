@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../Styles/CategoryPage.css"
 import { Link } from "react-router-dom";
 const products1 = [
@@ -66,6 +66,7 @@ const products2 = [
   },
 ];
 function Category() {
+
   return (
     <div className="width-100 categoryPageMain">
       <div className="res-1440-in-heavy categoryPageSec">
@@ -97,18 +98,36 @@ function Category() {
 export default Category;
 
 
+
+
 function ProductCardForCate({ product }) {
+
+  const [imageer, setimager] = useState("/images/goToDetails-icon.png")
+  const [loading, setLoading] = useState(true)
   const { name, image } = product;
   return (
     <div className="productCard">
       <div className="productCardImageView">
-        <img src={image} className="productCardImage" />
+        <img src={image} onLoad={() => {
+          setLoading(false)
+        }} className="productCardImage" />
       </div>
-      <Link to={`/${name}`}>
-      <div className="productCardInfoView">
-        <p className="productTitle">{name}</p>
-        <img src="./images/goToDetails-icon.png" className="productIcon" />
-      </div>
+      <Link
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+        to={`/${name}`}>
+        <div onMouseMove={() => {
+          setimager("/images/whitearrow.png")
+        }}
+          onMouseLeave={() => {
+
+            setimager("/images/goToDetails-icon.png")
+          }}
+          className="productCardInfoView">
+          <p className="productTitle">{name}</p>
+          <img src={imageer} className="productIcon" />
+        </div>
       </Link>
     </div>
   );

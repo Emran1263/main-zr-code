@@ -1,30 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../Styles/CategoryPage.css";
-import ProductCard from "../ProductCard";
+import { Link } from "react-router-dom";
 
-const products = [
-  {
-    id: 1,
-    name: "Dental Devices",
-    image: "./images/category/teeth.png",
-  },
-  {
-    id: 2,
-    name: "Dental Devices",
-    image: "./images/category/teeth.png",
-  },
-  {
-    id: 3,
-    name: "Dental Devices",
-    image: "./images/category/teeth.png",
-  },
-  {
-    id: 4,
-    name: "Dental Devices",
-    image: "./images/category/teeth.png",
-  },
-];
-function MoreProducts() {
+function MoreProducts({ limitedProducts, cata }) {
   return (
     <div className="width-100 categoryPageMain">
       <div className="res-1440-in-heavy">
@@ -36,8 +14,8 @@ function MoreProducts() {
               </h1>
             </div>
             <div className="productListView">
-              {products.map((product) => (
-                <ProductCard product={product} />
+              {limitedProducts.map((product, index) => (
+                <ProductCardMore key={index} product={product} cata={cata} />
               ))}
             </div>
           </div>
@@ -48,3 +26,33 @@ function MoreProducts() {
 }
 
 export default MoreProducts;
+
+function ProductCardMore({ product, cata }) {
+  const [imageer, setimager] = useState("/images/goToDetails-icon.png");
+  return (
+    <div className="productCard">
+      <div className="productCardImageView">
+        <img src={product.image.url} className="productCardImage" />
+      </div>
+      <Link
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+        to={`/${cata}/${product.id}`}
+      >
+        <div
+          onMouseMove={() => {
+            setimager("/images/whitearrow.png");
+          }}
+          onMouseLeave={() => {
+            setimager("/images/goToDetails-icon.png");
+          }}
+          className="productCardInfoView"
+        >
+          <p className="productTitle">{product.name}</p>
+          <img src={imageer} className="productIcon" />
+        </div>
+      </Link>
+    </div>
+  );
+}

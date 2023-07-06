@@ -1,62 +1,56 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartProduct from "./CartProduct";
 import "../../../Styles/CartPage.css";
+import LikedItemsContext from "../../context/AddToCartContext";
+import { Link } from "react-router-dom";
 
-const products = [
-  {
-    id: 1,
-    name: "Artificial joint",
-    image: "./images/details/artificialJoint.png",
-  },
-  {
-    id: 2,
-    name: "Artificial joint",
-    image: "./images/details/artificialJoint.png",
-  },
-  {
-    id: 3,
-    name: "Artificial joint",
-    image: "./images/details/artificialJoint.png",
-  },
-  {
-    id: 4,
-    name: "Artificial joint",
-    image: "./images/details/artificialJoint.png",
-  },
-];
+
 function CartPageComp() {
+  const { likedItems } = useContext(LikedItemsContext);
   return (
     <div className="res-1440-in CPMainDiv">
       <h1 className="CartPageH">Cart</h1>
-      <div className="res-1440-40 CPSecDiv">
-        {products.map((product) => (
+      <div
+        style={{ display: likedItems.length === 0 ? "none" : "block" }}
+        className="CPSecDiv"
+      >
+        {likedItems.map((product) => (
           <CartProduct product={product} />
         ))}
       </div>
-      <div className="res-1440-in SPSecDiv">
-        <div className="CPQuantityAndSendInquiryDiv">
-          <span
-            style={{
-              display: "inline-flex",
-              width: "48%",
-            }}
-          >
-            <p className="CPQuantitySelected">04</p>
-            <p
-              style={{ fontWeight: 300, marginLeft: 10 }}
-              className="CPQuantitySelected"
-            >
-              Items selected, Send inquiry to <br />
-              get price quotation now
-            </p>
-          </span>
+      <div
+        className="no_item_in_cart"
+        style={{ display: likedItems.length === 0 ? "flex" : "none" }}
+      >
+        <h1 className="no_item_in_cart_h1">Your Cart is Empty</h1>
+      </div>
+      {likedItems.length !== 0 && (
+        <div className="SPSecDiv">
+          <div className="CPQuantityAndSendInquiryDiv">
+            <span className="span04">
+              <p className="CPQuantitySelected">0{likedItems.length}</p>
+              <p
+                style={{ fontWeight: 300, marginLeft: 10 }}
+                className="CPQuantitySelected"
+              >
+                Items selected, Send inquiry to <br />
+                get price quotation now
+              </p>
+            </span>
 
-          <div className="CPSendAndCallDiv">
-            <button className="CartPageSendButton">Send Inquiry</button>
-            <button className="CartPageCallButton">Call Us</button>
+            <div className="CPSendAndCallDiv">
+              <Link to={`/allinquiry`} className="CartPageSendButton">Send Inquiry</Link>
+              <a
+                target="_blank"
+                href="https://wa.me/+923069566970"
+                className="contactUsButton"
+              >
+                <button className="CartPageCallButton">Call Us</button>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

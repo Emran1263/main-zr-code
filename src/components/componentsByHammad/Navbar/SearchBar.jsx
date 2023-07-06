@@ -2,8 +2,11 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/AllProductsContext";
 import "../../../Styles/Navbar.css";
+import LikedItemsContext from "../../context/AddToCartContext";
+
 
 export default function SearchBar() {
+  const { likedItems } = useContext(LikedItemsContext);
   const data = useContext(AppContext);
   const [searchText, setSearchText] = useState("")
    
@@ -73,18 +76,24 @@ export default function SearchBar() {
           </div>
         </div>
         <div className="SearchBarContentCallCart">
+          <Link to={"/cart"}>
+          <div className="p-r rennn">
+            {likedItems.length&&<span className="red_dot_as"></span>}
           <img
             src="/images/cart.png"
             alt=""
             className="SearchBarCntCallimg border_both_img"
           />
+          </div>
+          </Link>
+          
           <div className="SearchBarCntCallDiv">
             <img
               src="/images/call.png"
               alt=""
               className="SearchBarCntCallimg"
             />
-            <p className="SearchBarCntCallPara">Call us</p>
+            <a href="tel:+1234567890" className="SearchBarCntCallPara">Call us</a>
           </div>
         </div>
       </div>

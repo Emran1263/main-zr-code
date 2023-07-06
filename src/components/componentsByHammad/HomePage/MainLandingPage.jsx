@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function MainLandingPage() {
   return (
     <div className="width-100 p-r color_main_landing_page"
@@ -7,8 +6,10 @@ export default function MainLandingPage() {
       height: `${window.innerHeight}px`,
     }}
     >
+
+      
       <div className="video_holder">
-        <video autoPlay muted loop className="main_video">
+        <video  autoPlay muted loop className="main_video">
           <source src="/video/landingPage.mp4" type="video/mp4" />
         </video>
       </div>

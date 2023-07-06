@@ -1,5 +1,5 @@
 .navbar_main_navbar_cnt {
-  position: relative;
+  position: fixed;
   top: 0;
   z-index: 10;
   left: 0;
@@ -17,7 +17,17 @@
 .black_bg {
   background-color: black;
 }
-
+.red_dot_as{
+  position: absolute;
+  top: 0;
+  left: 60%;
+  height: 7px;
+  width: 7px;
+  z-index: 100;
+  background-color: rgb(255, 51, 51);
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
 .navbar_flex_cnt {
   display: flex;
   align-items: center;
@@ -35,7 +45,12 @@
   font-size: 1.1em;
   font-weight: 200;
   letter-spacing: 1px;
+  color: #c5c5c5;
   font-family: "poppins";
+  transition: all 300ms ease;
+}
+.linker_a:hover{
+  color: white;
 }
 .linker_search_image_icon {
   height: 20px;
@@ -45,6 +60,7 @@
 
 .bold {
   font-weight: 400;
+  color: white;
 }
 .navbar_menu_icon_button {
   display: none;
@@ -189,6 +205,8 @@
 /* SearchBar Browse Items */
 
 .SearchBarCnt {
+  position: relative;
+  z-index: 20;
   padding: 2em 0px;
   display: flex;
   justify-content: center;
@@ -213,6 +231,9 @@
   padding: 5px 0px;
   border-bottom: 1px solid #a1a1a1;
   font-size: 0.9em;
+}
+.category_drop_down_a:hover{
+  background-color: rgba(0, 0, 0, 0.062);
 }
 .SearchBarContentDropDown {
   position: relative;
@@ -273,6 +294,13 @@
   height: 20px;
   padding: 0px 15px;
 }
+.rennn{
+  transition: all 300ms ease;
+}
+.rennn:hover{
+  transform: translateY(-3px);
+}
+
 .SearchBarCntCallDiv {
   display: flex;
   align-items: center;
@@ -282,6 +310,10 @@
   color: #a1a1a1;
   text-decoration: underline;
   font-size: 0.9em;
+  transition: all 300ms ease;
+}
+.SearchBarCntCallPara:hover{
+  transform: translateY(-3px);
 }
 .border_both_img {
   border-left: 1px solid #a1a1a1;
@@ -298,7 +330,12 @@
   display: block;
 
 }
-
+.show{
+  top: -100%;
+}
+.hide{
+  top: 0%;
+}
 /* Media Quries */
 
 @media only screen and (max-width: 700px) {
@@ -307,6 +344,25 @@
   }
   .navbar_linker {
     display: none;
+  }
+  .SearchBarContentDropDownBtn{
+    font-size: .7em;
+    padding: 10px 10px;
+  }
+  .SearchBarContentInputFeild{
+    font-size: .7em;
+    padding: 10px;
+    width: calc(100% + 35px);
+  }
+  .SearchBarContentBtnSearch{
+    width: 100%;
+    justify-content: start;
+  }
+  .SearchBarContent{
+    flex-direction: column-reverse;
+  }
+  .SearchBarContentCallCart{
+    margin-bottom: 1.5em;
   }
   .HeaderMainCntContentH1 {
     font-size: 1.5em;

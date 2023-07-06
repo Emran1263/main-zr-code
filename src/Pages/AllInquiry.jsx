@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import CartPageComp from "../components/componentsByAhmad/CartPageComp";
 import SearchBar from "../components/componentsByHammad/Navbar/SearchBar";
 import Header from "../components/componentsByHammad/Navbar/Header";
-function CartPage() {
+import AllInquiryMain from "../components/componentsByAhmad/InquiryForm/AllInquiryMain";
+
+function AllInquiry() {
   useEffect(()=>{
-    document.title= "Cart Page | ZR Surgicals"
+    document.title= "Send Inquiry | ZR Surgicals"
 
 
   },[])
@@ -12,9 +13,9 @@ function CartPage() {
     <div className="width-100" style={{marginTop:"4em"}}>
       <Header/>
       <SearchBar/>
-      <CartPageComp />
+      <AllInquiryMain />
     </div>
   );
 }
 
-export default CartPage;
+export default AllInquiry;

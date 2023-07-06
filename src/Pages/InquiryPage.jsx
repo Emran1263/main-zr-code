@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import CartPageComp from "../components/componentsByAhmad/CartPageComp";
+import InquiryMain from "../components/componentsByAhmad/InquiryForm";
 import SearchBar from "../components/componentsByHammad/Navbar/SearchBar";
 import Header from "../components/componentsByHammad/Navbar/Header";
-function CartPage() {
+function InquiryPage() {
   useEffect(()=>{
-    document.title= "Cart Page | ZR Surgicals"
+    document.title= "Send Inquiry | ZR Surgicals"
 
 
   },[])
@@ -12,9 +12,9 @@ function CartPage() {
     <div className="width-100" style={{marginTop:"4em"}}>
       <Header/>
       <SearchBar/>
-      <CartPageComp />
+      <InquiryMain />
     </div>
   );
 }
 
-export default CartPage;
+export default InquiryPage;

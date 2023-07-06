@@ -1,22 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../../Styles/Navbar.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
 
 
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   const location = useLocation();
   const [activeLink, setActiveLink] = useState('');
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   React.useEffect(() => {
     setActiveLink(location.pathname);
-  }, [location]);
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      setVisible(
+        (prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) ||
+        currentScrollPos < 10
+      );
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [location,prevScrollPos]);
+
   
 
   return (
-    <div className={`width-100 navbar_main_navbar_cnt ${activeLink === '/' ? 'transparent' : 'black_bg'}`} >
+    <div className={`width-100 navbar_main_navbar_cnt  ${activeLink === '/' ? 'transparent' : 'black_bg'}`} >
       <MainMenu menu={menu} setMenu={setMenu} />
 
       <div className="res-1440-40 navbar_flex_cnt">
@@ -31,7 +49,7 @@ export default function Navbar() {
           <Link className={`linker_a  ${activeLink === '/about' ? 'bold' : ''}`} to="/about">
             About
           </Link>
-          <Link className={`linker_a  ${activeLink === '/contact' ? 'bold' : ''}`} to="">
+          <Link className={`linker_a  ${activeLink === '/contact' ? 'bold' : ''}`} to="/contact">
             Contact
           </Link>
          
@@ -65,7 +83,7 @@ const MainMenu = ({ menu, setMenu }) => {
           setMenu(false);
         }}
         className="navbar_menu_icon_button_cross"
-        src="/images/close.png"
+        src="/images/cross.png"
         alt=""
       />
 
@@ -77,13 +95,13 @@ const MainMenu = ({ menu, setMenu }) => {
         </Link>
         <Link onClick={()=>{
           setMenu(false)
-        }} className={`linker_a  ${activeLink === '/inventory' ? 'bold' : ''}`} to="/inventory">
-          Inventory
+        }} className={`linker_a  ${activeLink === '/products' ? 'bold' : ''}`} to="/products">
+          Products
         </Link>
         <Link onClick={()=>{
           setMenu(false)
-        }} className={`linker_a  ${activeLink === '/process' ? 'bold' : ''}`} to="/process">
-          Process
+        }} className={`linker_a  ${activeLink === '/about' ? 'bold' : ''}`} to="/about">
+          About
         </Link>
         <Link onClick={()=>{
           setMenu(false)

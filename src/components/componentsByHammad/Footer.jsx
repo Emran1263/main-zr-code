@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../../Styles/Footer.css";
+import { Link } from "react-router-dom";
+import { AppContext } from "../context/AllProductsContext";
 
 export default function Footer() {
   return (
@@ -42,7 +44,7 @@ export default function Footer() {
       <ClientsReviews />
       <FAQ />
       <MainFooter />
-      <BarAtBottom/>
+      <BarAtBottom />
     </div>
   );
 }
@@ -109,6 +111,24 @@ const QualityPolicy = () => {
 };
 
 const ClientsReviews = () => {
+  const [reviewsNumber, setReviewNumber] = useState(1);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      // Code to be executed repeatedly
+
+      if (reviewsNumber < 5) {
+        setReviewNumber(reviewsNumber + 1);
+      } else {
+        setReviewNumber(1);
+      }
+    }, 3000); // 1000 milliseconds = 1 second
+    return () => {
+      clearInterval(intervalId);
+    };
+
+    // Clean up the interval when the component unmounts
+  }, [reviewsNumber]);
   return (
     <div className="width-100 ClientsReviewsCnt">
       <div className="res-1440-40 ClientsReviewsContent">
@@ -119,9 +139,12 @@ const ClientsReviews = () => {
           className="ClientsReviewsContentImg"
         />
         <div className="ClientsReviewsContentReviews">
-          <div className="ClientsReviewsContentReviewsR">
+          <div
+            className="ClientsReviewsContentReviewsR R_1"
+            style={{ left: reviewsNumber === 1 ? "0px" : "-110%" }}
+          >
             <p className="ClientsReviewsContentReviewsRPara">
-              “I am extremely impressed with the medical equipment produced by
+              "I am extremely impressed with the medical equipment produced by
               this company. The quality of their products is exceptional, and
               they have greatly improved the efficiency of our healthcare
               facility. The equipment is reliable, user-friendly, and has
@@ -132,13 +155,119 @@ const ClientsReviews = () => {
               - Dr. Sarah Thompson, Chief Medical Officer
             </h3>
           </div>
+          <div
+            className="ClientsReviewsContentReviewsR R_2"
+            style={{ left: reviewsNumber === 2 ? "0px" : "-110%" }}
+          >
+            <p className="ClientsReviewsContentReviewsRPara">
+              "Working with this company has been a pleasure. Their team was
+              attentive to our needs and provided excellent customer service
+              throughout the entire process. The medical equipment they
+              manufactured for us has exceeded our expectations in terms of
+              functionality and durability. We are grateful for their expertise
+              and commitment to delivering top-notch products."
+            </p>
+            <h3 className="ClientsReviewsContentReviewsRWriter">
+              - Mark Johnson, Hospital Administrator
+            </h3>
+          </div>
+          <div
+            className="ClientsReviewsContentReviewsR R_3"
+            style={{ left: reviewsNumber === 3 ? "0px" : "-110%" }}
+          >
+            <p className="ClientsReviewsContentReviewsRPara">
+              "We have been using the medical equipment manufactured by this
+              company for several years now, and we couldn't be happier with the
+              results. Their equipment has helped streamline our workflow and
+              enhance the accuracy of diagnoses. It is evident that they
+              prioritize innovation and incorporate the latest technological
+              advancements into their products. Their dedication to quality is
+              truly commendable."
+            </p>
+            <h3 className="ClientsReviewsContentReviewsRWriter">
+              - Dr. Emily Rodriguez, Radiologist
+            </h3>
+          </div>
+          <div
+            className="ClientsReviewsContentReviewsR R_4"
+            style={{ left: reviewsNumber === 4 ? "0px" : "-110%" }}
+          >
+            <p className="ClientsReviewsContentReviewsRPara">
+              "As a healthcare provider, I am always on the lookout for reliable
+              and efficient medical equipment. This company has consistently
+              delivered products that meet and exceed my expectations. Their
+              equipment is user-friendly, robust, and performs exceptionally
+              well in demanding clinical environments. I have complete
+              confidence in their products, and I would highly recommend them to
+              anyone in the healthcare industry."
+            </p>
+            <h3 className="ClientsReviewsContentReviewsRWriter">
+              - Dr. Michael Carter, Cardiologist
+            </h3>
+          </div>
+          <div
+            className="ClientsReviewsContentReviewsR R_5"
+            style={{ left: reviewsNumber === 5 ? "0px" : "-110%" }}
+          >
+            <p className="ClientsReviewsContentReviewsRPara">
+              "The medical equipment produced by this company has revolutionized
+              our operating rooms. The precision and reliability of their
+              products have significantly improved surgical outcomes. The
+              company's commitment to safety and innovation is evident in every
+              aspect of their equipment. We are grateful to have partnered with
+              them and look forward to future collaborations."
+            </p>
+            <h3 className="ClientsReviewsContentReviewsRWriter">
+              - Linda Davis, Head Nurse, Surgical Department
+            </h3>
+          </div>
         </div>
         <div className="ClientsReviewsContentBars">
-          <span className="ClientsReviewsContentBar"></span>
-          <span className="ClientsReviewsContentBar"></span>
-          <span className="ClientsReviewsContentBar"></span>
-          <span className="ClientsReviewsContentBar"></span>
-          <span className="ClientsReviewsContentBar"></span>
+          <span
+            style={{
+              backgroundColor: reviewsNumber === 1 ? "#2a6280" : "#cecece",
+            }}
+            onClick={() => {
+              setReviewNumber(1);
+            }}
+            className="ClientsReviewsContentBar"
+          ></span>
+          <span
+            style={{
+              backgroundColor: reviewsNumber === 2 ? "#2a6280" : "#cecece",
+            }}
+            onClick={() => {
+              setReviewNumber(2);
+            }}
+            className="ClientsReviewsContentBar"
+          ></span>
+          <span
+            style={{
+              backgroundColor: reviewsNumber === 3 ? "#2a6280" : "#cecece",
+            }}
+            onClick={() => {
+              setReviewNumber(3);
+            }}
+            className="ClientsReviewsContentBar"
+          ></span>
+          <span
+            style={{
+              backgroundColor: reviewsNumber === 4 ? "#2a6280" : "#cecece",
+            }}
+            onClick={() => {
+              setReviewNumber(4);
+            }}
+            className="ClientsReviewsContentBar"
+          ></span>
+          <span
+            style={{
+              backgroundColor: reviewsNumber === 5 ? "#2a6280" : "#cecece",
+            }}
+            onClick={() => {
+              setReviewNumber(5);
+            }}
+            className="ClientsReviewsContentBar"
+          ></span>
         </div>
       </div>
     </div>
@@ -243,6 +372,23 @@ const FAQ = () => {
 };
 
 const MainFooter = () => {
+  const [searchText, setSearchText] = useState("");
+  const data = useContext(AppContext);
+
+  const Categories = [
+    "Imaging Devices",
+    "Cardiovascular Devices",
+    "Respiratory Devices",
+    "Orthopedic Devices",
+    "Dental Devices",
+    "Surgical Devices",
+    "Life Care Equipment",
+    "Rehabilitation Devices",
+    "Home Care Equipment",
+    "Laboratory Equipment",
+    "Hollowares",
+    "Plastic Holloware",
+  ];
   return (
     <div className="width-100 MainFooterCnt">
       <div className="MainFooterContent res-1440-40">
@@ -301,23 +447,22 @@ const MainFooter = () => {
         <div className="MainFooterContentCataCredit">
           <div className="MainFooterContentCataDiv">
             <h2 className="MainFooterContentCataHeadingH">Categories</h2>
-            <p className="MainFooterContentCataLinks">Imaging Devices</p>
-            <p className="MainFooterContentCataLinks">Cardiovascular Devices</p>
-            <p className="MainFooterContentCataLinks">Respiratory Devices</p>
-            <p className="MainFooterContentCataLinks">Orthopedic Devices</p>
-            <p className="MainFooterContentCataLinks">Dental Devices</p>
-            <p className="MainFooterContentCataLinks">Surgical Devices</p>
-            <p className="MainFooterContentCataLinks">Life Care Equipment</p>
-            <p className="MainFooterContentCataLinks">Rehabilitation Devices</p>
-            <p className="MainFooterContentCataLinks">Home Care Equipment</p>
-            <p className="MainFooterContentCataLinks">
-              Emergency Care Equipment
-            </p>
+            {Categories.map((product, index) => {
+              return (
+                <Link
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                  to={`/${product}`}
+                  key={index}
+                  className="MainFooterContentCataLinks"
+                >
+                  {product}
+                </Link>
+              );
+            })}
           </div>
           <div className="MainFooterContentCataDiv">
-            <p className="MainFooterContentCataLinks">Laboratory Equipment</p>
-            <p className="MainFooterContentCataLinks">Hollowares</p>
-            <p className="MainFooterContentCataLinks">Plastic Holloware</p>
             <h2 className="MainFooterContentCataHeadingH">Credits</h2>
             <p className="MainFooterContentCataLinks">Freepik</p>
             <p className="MainFooterContentCataLinks">Figma</p>
@@ -330,18 +475,13 @@ const MainFooter = () => {
             alt="Surgicals Products by ZR"
             className="MainFooterContentSearchLocationImg"
           />
-          <div className="MainFooterContentSearchLocationInputDiv">
-            <img
-              src="/images/search.png"
-              alt="Search Image"
-              className="MainFooterContentSearchLocationSearchImg"
-            />
-            <input
-              placeholder="Search Any Product"
-              type="text"
-              className="MainFooterContentSearchLocationInput"
-            />
-          </div>
+            
+            <iframe
+              className="MapWALA"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d471.7575570269424!2d74.5439183983102!3d32.57137186025293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2s!4v1688410345722!5m2!1sen!2s"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
         </div>
       </div>
     </div>
@@ -353,8 +493,13 @@ const BarAtBottom = () => {
     <div className="width-100 BarAtBottomCnt">
       <div className="BarAtBottomContent res-1440-40">
         <p className="BarAtBottomContentP">www.zrsurgicals.com</p>
-        <p className="BarAtBottomContentP">Designed by <span className="fw-500">Agaaz</span>, Developed by <span className="fw-500">RavalBit</span>.</p>
-        <p className="BarAtBottomContentP">Copyright © 2022-23, ZR Surgical, All Rights Reserved</p>
+        <p className="BarAtBottomContentP">
+          Designed by <span className="fw-500">Agaaz</span>, Developed by{" "}
+          <span className="fw-500">RavalBit</span>.
+        </p>
+        <p className="BarAtBottomContentP">
+          Copyright © 2022-23, ZR Surgical, All Rights Reserved
+        </p>
       </div>
     </div>
   );

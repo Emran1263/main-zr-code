@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from "react";
+import Spinner from "../../componentsByAhmad/Spinner";
 
 export default function AboutTopPage() {
+  const [loading, setLoading] = useState(true);
   return (
-    <div className='res-1440-40 AboutTopPageCnt'>
-        <img className='AboutTopPageCntImg' src="/images/aboutBackground.png" alt="" />
+    <div className="width-100">
+      {loading && <Spinner/>}
+      <div className="res-1440-40 AboutTopPageCnt">
+        <img
+          className="AboutTopPageCntImg"
+          onLoad={() => {
+            setLoading(false);
+          }}
+          src="/images/aboutBackground.png"
+          alt=""
+        />
+      </div>
     </div>
-  )
+  );
 }
