@@ -8,19 +8,11 @@ function ProductFromCategory({ filteredProducts, cata }) {
       <div className="res-1440-in-heavy">
         <div className="categoryPageSec">
           <div className="productFromCategorySec">
-            <div className="navPath">
-              <p className="navPathText">Home</p>
-              <p className="navPathText">{">"}</p>
-              <p className="navPathText">Products</p>
-              <p className="navPathText">{">"}</p>
-              <p className="navPathText">Categories</p>
-              <p className="navPathText">{">"}</p>
-              <p className="navPathText">Name</p>
-            </div>
+            
             <div className="categoryHeadAndSortDiv">
               <div className="categoryHeaderView">
                 <h1 className="categoryProductsFromH">Products From:</h1>
-                <h1 className="categoryNameH">Dental Devices</h1>
+                <h1 className="categoryNameH">{cata}</h1>
               </div>
             </div>
             <div className="productListView">
