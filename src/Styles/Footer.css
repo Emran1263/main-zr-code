@@ -446,6 +446,7 @@
 }
 .fw-500 {
   font-weight: 500;
+  color: inherit;
 }
 .BarAtBottomContent {
   display: flex;

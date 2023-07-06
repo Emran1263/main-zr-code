@@ -494,8 +494,8 @@ const BarAtBottom = () => {
       <div className="BarAtBottomContent res-1440-40">
         <p className="BarAtBottomContentP">www.zrsurgicals.com</p>
         <p className="BarAtBottomContentP">
-          Designed by <span className="fw-500">Agaaz</span>, Developed by{" "}
-          <span className="fw-500">RavalBit</span>.
+          Designed by <a href="https://www.instagram.com/agaaz.01/?igshid=Y2IzZGU1MTFhOQ==" className="fw-500">Agaaz</a>, Developed by{" "}
+          <a href="https://www.instagram.com/ravalbit/?igshid=Y2IzZGU1MTFhOQ%3D%3D" className="fw-500">RavalBit</a>.
         </p>
         <p className="BarAtBottomContentP">
           Copyright © 2022-23, ZR Surgical, All Rights Reserved
