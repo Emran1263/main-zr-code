@@ -5,64 +5,64 @@ const products1 = [
   {
     id: 1,
     name: "Imaging Devices",
-    image: "./images/category/imagingDevices.png",
+    image: "/images/category/imagingDevices.png",
   },
   {
     id: 2,
     name: "Cardiovascular Devices",
-    image: "./images/category/cardio.png",
+    image: "/images/category/cardio.png",
   },
   {
     id: 3,
     name: "Respiratory Devices",
-    image: "./images/category/respiratory.png",
+    image: "/images/category/respiratory.png",
   },
   {
     id: 4,
     name: "Orthopedic Devices",
-    image: "./images/category/ortho.png",
+    image: "/images/category/ortho.png",
   },
   {
     id: 5,
     name: "Dental Devices",
-    image: "./images/category/dental.png",
+    image: "/images/category/Dental.png",
   },
   {
     id: 6,
     name: "Surgical Devices",
-    image: "./images/category/surgical.png",
+    image: "/images/category/surgical.png",
   },
 ];
 const products2 = [
   {
     id: 1,
     name: "Life Care Equipment",
-    image: "./images/category/lifeCare.png",
+    image: "/images/category/lifeCare.png",
   },
   {
     id: 2,
     name: "Rehabilitation Devices",
-    image: "./images/category/rehab.png",
+    image: "/images/category/rehab.png",
   },
   {
     id: 3,
     name: "Home Care Equipment",
-    image: "./images/category/homecare.png",
+    image: "/images/category/homecare.png",
   },
   {
     id: 4,
     name: "Laboratory Equipment",
-    image: "./images/category/lab.png",
+    image: "/images/category/lab.png",
   },
   {
     id: 5,
     name: "Hollowares",
-    image: "./images/category/hollowares.png",
+    image: "/images/category/hollowares.png",
   },
   {
     id: 6,
     name: "Plastic Holloware",
-    image: "./images/category/plasticHollowares.png",
+    image: "/images/category/plasticHollowares.png",
   },
 ];
 function Category() {

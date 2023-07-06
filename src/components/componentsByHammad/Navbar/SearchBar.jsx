@@ -26,7 +26,7 @@ export default function SearchBar() {
   ];
   return (
     <div className="width-100 SearchBarCnt">
-      <div className="res-1440-40 SearchBarContent">
+      <div className="res-1440-10 SearchBarContent">
         <div className="SearchBarContentBtnSearch">
           <div className="SearchBarContentDropDown">
             <button className="SearchBarContentDropDownBtn">
@@ -93,7 +93,7 @@ export default function SearchBar() {
               alt=""
               className="SearchBarCntCallimg"
             />
-            <a href="tel:+1234567890" className="SearchBarCntCallPara">Call us</a>
+            <a href="tel:+923069566970" className="SearchBarCntCallPara">Call us</a>
           </div>
         </div>
       </div>

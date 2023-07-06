@@ -215,7 +215,7 @@
 }
 .SearchBarContent {
   display: flex;
-  width: min(100% - 20px, 700px);
+  width: min(100% - 10px, 700px);
   justify-content: space-between;
   align-items: center;
 }
@@ -371,4 +371,19 @@
   .ZRlogoHeaderMainCntContent {
     width: 40px;
   }
+}
+@media only screen and (max-width: 380px) {
+  .SearchBarContentDropDownBtn{
+    pad: 10px 5px;
+    font-size: .65em ;
+  }
+  .SearchBarContentInputFeild{
+    font-size: .65em;
+    padding: 10px 5px;
+    width: auto;
+  }
+  .SearchBarContentDropDownContent_re{
+    left: -30px;
+  }
+  
 }
