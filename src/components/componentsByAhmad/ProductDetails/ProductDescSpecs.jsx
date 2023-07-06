@@ -74,7 +74,7 @@ function ProductDescSpecs({ particular_data }) {
               <p className="PDSpecsText">Stock Status</p>
             </div>
             <div className="view2">
-              <p className="PDSpecsText">Available Xo214</p>
+              <p className="PDSpecsText"><span style={{color:"#8FB347"}}>Available</span></p>
             </div>
           </div>
         </div>
