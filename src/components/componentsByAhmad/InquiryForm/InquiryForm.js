@@ -42,7 +42,7 @@ function InquiryForm() {
       );
   };
   return (
-    <div className="IFMainDiv">
+    particular_data && <div className="IFMainDiv">
       <div className="IFFormInputs">
         <form ref={form} onSubmit={sendEmail} className="IFMainForm">
           <div className="IFDoubleInputs">

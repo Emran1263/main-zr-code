@@ -17,12 +17,12 @@ export default function SearchBar() {
     "Orthopedic Devices",
     "Dental Devices",
     "Surgical Devices",
-    "Life Care Equipment",
+    "Patient Monitoring Devices",
     "Rehabilitation Devices",
     "Home Care Equipment",
     "Laboratory Equipment",
     "Hollowares",
-    "Plastic Holloware",
+    "Medical Holloware",
   ];
   return (
     <div className="width-100 SearchBarCnt">

@@ -36,7 +36,7 @@ const products1 = [
 const products2 = [
   {
     id: 1,
-    name: "Life Care Equipment",
+    name: "Patient Monitoring Devices",
     image: "/images/category/lifeCare.png",
   },
   {
@@ -61,7 +61,7 @@ const products2 = [
   },
   {
     id: 6,
-    name: "Plastic Holloware",
+    name: "Medical Holloware",
     image: "/images/category/plasticHollowares.png",
   },
 ];

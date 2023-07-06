@@ -30,7 +30,6 @@ function ProductDisplayDetails({ particular_data, cata, prodId }) {
       <div className="PDDetailsMainCnt">
         {loading && <Spinner/>}
         <div className="res-1440-40">
-          <NavPath />
           <div className="PDDetailsMainDiv">
             <div className="PDDetailsImageView">
               <div className="PDDetailsOtherImgView">
