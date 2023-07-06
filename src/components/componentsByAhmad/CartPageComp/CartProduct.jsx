@@ -22,7 +22,7 @@ function CartProduct({ product }) {
           }}
         />
         <div className="CartProductReviewAndSpecs">
-          <a href="" className="CartProductMoreSpecsButton">
+          <a href={product.thank_you_url}  className="CartProductMoreSpecsButton">
             More Specifications
           </a>
           <div className="CartProductReviewDiv">
