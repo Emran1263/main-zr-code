@@ -352,7 +352,7 @@
   .SearchBarContentInputFeild{
     font-size: .7em;
     padding: 10px;
-    width: calc(100% + 35px);
+    width: auto;
   }
   .SearchBarContentBtnSearch{
     width: 100%;
