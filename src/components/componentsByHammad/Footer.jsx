@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import "../../Styles/Footer.css";
 import { Link } from "react-router-dom";
 import { AppContext } from "../context/AllProductsContext";
+import Spinner from "../componentsByAhmad/Spinner";
+import { commerce } from "../lib/commerce";
+
 
 export default function Footer() {
   return (
@@ -375,22 +378,27 @@ const MainFooter = () => {
   const [searchText, setSearchText] = useState("");
   const data = useContext(AppContext);
 
-  const Categories = [
-    "Imaging Devices",
-    "Cardiovascular Devices",
-    "Respiratory Devices",
-    "Orthopedic Devices",
-    "Dental Devices",
-    "Surgical Devices",
-    "Patient Monitoring Devices",
-    "Rehabilitation Devices",
-    "Home Care Equipment",
-    "Laboratory Equipment",
-    "Hollowares",
-    "Medical Holloware",
-  ];
+  
+  const [cate, setCate] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  const fetchProducts = async () => {
+    const { data } = await commerce.categories.list({
+      limit: 500,
+    });
+    setCate(data);
+    setLoading(false)
+  };
+
+
+ 
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
   return (
-    <div className="width-100 MainFooterCnt">
+    cate && <div className="width-100 MainFooterCnt">
+      {loading && <Spinner/>}
       <div className="MainFooterContent res-1440-40">
         <div className="MainFooterContentLogoAbout">
           <div className="MainFooterContentLogoAboutDiv">
@@ -447,17 +455,17 @@ const MainFooter = () => {
         <div className="MainFooterContentCataCredit">
           <div className="MainFooterContentCataDiv">
             <h2 className="MainFooterContentCataHeadingH">Categories</h2>
-            {Categories.map((product, index) => {
+            {cate.map((product, index) => {
               return (
                 <Link
                   onClick={() => {
                     window.scrollTo(0, 0);
                   }}
-                  to={`/${product}`}
+                  to={`/${product.name}`}
                   key={index}
                   className="MainFooterContentCataLinks"
                 >
-                  {product}
+                  {product.name}
                 </Link>
               );
             })}

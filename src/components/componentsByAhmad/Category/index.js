@@ -1,95 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../../Styles/CategoryPage.css"
 import { Link } from "react-router-dom";
-const products1 = [
-  {
-    id: 1,
-    name: "Imaging Devices",
-    image: "/images/category/imagingDevices.png",
-  },
-  {
-    id: 2,
-    name: "Cardiovascular Devices",
-    image: "/images/category/cardio.png",
-  },
-  {
-    id: 3,
-    name: "Respiratory Devices",
-    image: "/images/category/respiratory.png",
-  },
-  {
-    id: 4,
-    name: "Orthopedic Devices",
-    image: "/images/category/ortho.png",
-  },
-  {
-    id: 5,
-    name: "Dental Devices",
-    image: "/images/category/Dental.png",
-  },
-  {
-    id: 6,
-    name: "Surgical Devices",
-    image: "/images/category/surgical.png",
-  },
-];
-const products2 = [
-  {
-    id: 1,
-    name: "Patient Monitoring Devices",
-    image: "/images/category/lifeCare.png",
-  },
-  {
-    id: 2,
-    name: "Rehabilitation Devices",
-    image: "/images/category/rehab.png",
-  },
-  {
-    id: 3,
-    name: "Home Care Equipment",
-    image: "/images/category/homecare.png",
-  },
-  {
-    id: 4,
-    name: "Laboratory Equipment",
-    image: "/images/category/lab.png",
-  },
-  {
-    id: 5,
-    name: "Hollowares",
-    image: "/images/category/hollowares.png",
-  },
-  {
-    id: 6,
-    name: "Medical Holloware",
-    image: "/images/category/plasticHollowares.png",
-  },
-];
+import { commerce } from "../../lib/commerce";
+import Spinner from "../Spinner";
+
+
+
+// Import the Commerce.js library
+
+  
+
 function Category() {
+  const [cate, setCate] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  const fetchProducts = async () => {
+    const { data } = await commerce.categories.list({
+      limit: 500,
+    });
+    setCate(data);
+    setLoading(false)
+  };
+
+
+ 
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
 
   return (
-    <div className="width-100 categoryPageMain">
+    cate && <div className="width-100 categoryPageMain">
+      {loading&& <Spinner/>}
       <div className="res-1440-in-heavy categoryPageSec">
         <div className="mainHeadingDiv">
           <h1 className="mainHeading">Our Categories</h1>
           <div className="headingLine"></div>
         </div>
         <div className="sectionMain">
-          <h2 className="sectionHeading">Medical Devices</h2>
           <div className="productListView">
-            {products1.map((product) => (
+            {cate.map((product) => (
               <ProductCardForCate product={product} />
             ))}
           </div>
         </div>
-        <div className="sectionMain">
-          <h2 className="sectionHeading">Medical Equipment</h2>
-          <div className="productListView">
-            {products2.map((product) => (
-              <ProductCardForCate product={product} />
-            ))}
-          </div>
-        </div>
+        
       </div>
     </div>
   );
@@ -104,11 +60,10 @@ function ProductCardForCate({ product }) {
 
   const [imageer, setimager] = useState("/images/goToDetails-icon.png")
   const [loading, setLoading] = useState(true)
-  const { name, image } = product;
   return (
     <div className="productCard">
       <div className="productCardImageView">
-        <img src={image} onLoad={() => {
+        <img src={product.assets[0].url} onLoad={() => {
           setLoading(false)
         }} className="productCardImage" />
       </div>
@@ -116,7 +71,7 @@ function ProductCardForCate({ product }) {
         onClick={() => {
           window.scrollTo(0, 0);
         }}
-        to={`/${name}`}>
+        to={`/${product.name}`}>
         <div onMouseMove={() => {
           setimager("/images/whitearrow.png")
         }}
@@ -125,7 +80,7 @@ function ProductCardForCate({ product }) {
             setimager("/images/goToDetails-icon.png")
           }}
           className="productCardInfoView">
-          <p className="productTitle">{name}</p>
+          <p className="productTitle">{product.name}</p>
           <img src={imageer} className="productIcon" />
         </div>
       </Link>

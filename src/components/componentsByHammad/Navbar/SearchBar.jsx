@@ -1,8 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/AllProductsContext";
 import "../../../Styles/Navbar.css";
 import LikedItemsContext from "../../context/AddToCartContext";
+import { commerce } from "../../lib/commerce";
+import Spinner from "../../componentsByAhmad/Spinner";
 
 
 export default function SearchBar() {
@@ -24,8 +26,26 @@ export default function SearchBar() {
     "Hollowares",
     "Medical Holloware",
   ];
+  const [cate, setCate] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  const fetchProducts = async () => {
+    const { data } = await commerce.categories.list({
+      limit: 500,
+    });
+    setCate(data);
+    setLoading(false)
+  };
+
+
+ 
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
   return (
-    <div className="width-100 SearchBarCnt">
+    cate&&<div className="width-100 SearchBarCnt">
+      {loading && <Spinner/>}
       <div className="res-1440-10 SearchBarContent">
         <div className="SearchBarContentBtnSearch">
           <div className="SearchBarContentDropDown">
@@ -33,10 +53,10 @@ export default function SearchBar() {
               Browse by catagory
             </button>
             <div className="SearchBarContentDropDownContent">
-              {Categories.map((category, index) => {
+              {cate.map((category, index) => {
                 return (
-                  <Link to={`/${category}`} key={index} className="category_drop_down_a" href="">
-                    {category}
+                  <Link to={`/${category.name}`} key={index} className="category_drop_down_a" href="">
+                    {category.name}
                   </Link>
                 );
               })}

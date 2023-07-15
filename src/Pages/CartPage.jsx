@@ -4,7 +4,7 @@ import SearchBar from "../components/componentsByHammad/Navbar/SearchBar";
 import Header from "../components/componentsByHammad/Navbar/Header";
 function CartPage() {
   useEffect(()=>{
-    document.title= "Cart Page | ZR Surgicals"
+    document.title= "Cart Items Page | ZR Surgicals"
 
 
   },[])

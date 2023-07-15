@@ -7,7 +7,7 @@ import OurPhilosophy from "../components/componentsByHammad/About/OurPhilosophy"
 
 export default function AboutPage() {
   useEffect(()=>{
-    document.title= "About | ZR Surgicals"
+    document.title= "About Us | ZR Surgicals"
   },[])
   return (
     <div className="width-100" style={{marginTop:"4em"}}>

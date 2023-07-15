@@ -4,7 +4,7 @@ import SearchBar from "../components/componentsByHammad/Navbar/SearchBar";
 import Header from "../components/componentsByHammad/Navbar/Header";
 function InquiryPage() {
   useEffect(()=>{
-    document.title= "Send Inquiry | ZR Surgicals"
+    document.title= "Send inquiry to get quote about your desire medical goods | ZR Surgicals"
 
 
   },[])

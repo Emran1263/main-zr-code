@@ -5,7 +5,7 @@ import AllInquiryMain from "../components/componentsByAhmad/InquiryForm/AllInqui
 
 function AllInquiry() {
   useEffect(()=>{
-    document.title= "Send Inquiry | ZR Surgicals"
+    document.title= "Send inquiry to get quote about your desire medical goods | ZR Surgicals"
 
 
   },[])
