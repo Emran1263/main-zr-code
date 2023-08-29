@@ -9,6 +9,7 @@ import InquiryPage from "./Pages/InquiryPage";
 import ContactPage from "./Pages/ContactPage";
 import MainCatePage from "./Pages/MainCatePage";
 import AllInquiry from "../src/Pages/AllInquiry"
+import MyPage from "./Pages/MyPage";
 
 
 export default function MainApp() {

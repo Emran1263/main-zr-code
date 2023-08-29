@@ -408,7 +408,7 @@ const MainFooter = () => {
               className="MainFooterContentLogoImg"
             />
             <h1 className="MainFooterContentHeadingH">
-              ZR Surgical & Corporation
+              ZR Surgical
             </h1>
           </div>
           <p className="MainFooterContentParaP">
